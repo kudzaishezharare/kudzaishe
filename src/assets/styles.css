@@ -1,0 +1,260 @@
+/* Import JetBrains Mono for the "Builder" aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+    /* STALELA BRAND COLORS */
+    --bg-color: #1C1C1C;        /* Deep Black */
+    --text-primary: #F3E4D4;    /* Desert Sand */
+    --text-secondary: #9C9288;  /* Dimmed Sand (Calculated for contrast) */
+    --accent: #A4785A;          /* Medium Sand (Links & Highlights) */
+    --border: #332F2D;          /* Lighter Obsidian for lines */
+
+    --avatar-size: 72px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 680px;
+    margin: 80px auto;
+    padding: 24px;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+}
+
+/* SELECTION HIGHLIGHT */
+::selection {
+    background: var(--accent);
+    color: var(--bg-color);
+}
+
+/* HEADER LAYOUT */
+header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 30px;
+}
+
+.avatar {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent); /* Medium Sand Border */
+    background-color: var(--border);
+}
+
+.header-text h1 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+}
+
+.bio {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* SECTION STYLING */
+section {
+    margin-bottom: 56px;
+}
+
+h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent); /* Using Medium Sand for headers */
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+/* ITEM LAYOUT (The Grid) */
+.item {
+    display: flex;
+    margin-bottom: 24px;
+    align-items: baseline;
+}
+
+.meta {
+    flex: 0 0 130px;
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-variant-numeric: tabular-nums; /* Aligns numbers perfectly */
+}
+
+.details {
+    flex: 1;
+}
+
+.title {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 6px;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* Interactive titles (for blog/projects) */
+a.title:hover {
+    color: var(--accent);
+}
+
+.desc {
+    color: var(--text-secondary);
+    font-size: 13.5px;
+    line-height: 1.5;
+}
+
+/* LINK STYLING */
+a.link {
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    transition: all 0.2s ease;
+    padding-bottom: 1px;
+}
+
+a.link:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+/* FOOTER / CONTACT */
+.contact-links {
+    margin-top: 80px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 24px;
+    font-size: 13px;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+    body { margin-top: 40px; padding: 20px; }
+    .item { flex-direction: column; gap: 4px; margin-bottom: 28px; }
+    .meta { margin-bottom: 2px; font-size: 12px; color: var(--accent); }
+    header { flex-direction: row; align-items: center; }
+    .avatar { width: 60px; height: 60px; }
+}
+
+/* ARTICLE PAGE STYLES */
+.back-link {
+    display: inline-block;
+    margin-bottom: 40px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    font-size: 13px;
+}
+
+.back-link:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.article-content h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.article-content .subtitle {
+    color: var(--accent);
+    font-size: 14px;
+    margin-bottom: 40px;
+    display: block;
+}
+
+.article-content h2 {
+    font-size: 16px;
+    color: var(--text-primary);
+    margin-top: 48px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+}
+
+.article-content p {
+    margin-bottom: 24px;
+    color: #dcd0c0; /* Slightly lighter than brand secondary for readability */
+}
+
+/* CODE BLOCK STYLING */
+pre {
+    background: #111;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 20px;
+    overflow-x: auto;
+    margin: 30px 0;
+    font-size: 13px;
+}
+
+code {
+    font-family: 'JetBrains Mono', monospace;
+    color: #a9b7c6;
+}
+
+.keyword { color: #cc7832; } /* Python Orange/Brown */
+.function { color: #ffc66d; } /* Python Yellow */
+.string { color: #6a8759; }   /* Python Green */
+
+/* FRACTAL DIAGRAM */
+.fractal-diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0;
+    padding: 40px;
+    background: #151515;
+    border: 1px solid var(--border);
+}
+
+.circle {
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    position: relative;
+}
+
+.ring-1 { width: 30px; height: 30px; }
+
+.ring-2 {
+    width: 80px; height: 80px;
+    display: flex; justify-content: center; align-items: center;
+    border-style: dashed;
+    opacity: 0.8;
+}
+
+.ring-3 {
+    width: 140px; height: 140px;
+    display: flex; justify-content: center; align-items: center;
+    border-style: dotted;
+    opacity: 0.6;
+}
+
+.caption {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
