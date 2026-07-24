@@ -102,6 +102,7 @@ export const projects = [
       }
     ],
     links: [
+      { label: 'Open live app', href: 'https://lalela-games.vercel.app' },
       { label: 'Source and documentation', href: 'https://github.com/kudzaishezharare/web-games' },
       { label: 'Upstream GCompris', href: 'https://gcompris.net' }
     ],
