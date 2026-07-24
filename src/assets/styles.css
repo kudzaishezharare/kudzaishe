@@ -22,11 +22,16 @@ body {
     font-family: 'JetBrains Mono', 'Courier New', monospace;
     font-size: 14px;
     line-height: 1.6;
-    max-width: 680px;
-    margin: 80px auto;
-    padding: 24px;
+    margin: 0;
+    padding: 0;
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
+}
+
+body .content {
+    width: min(680px, calc(100vw - 248px));
+    margin: 80px auto;
+    transform: translateX(100px);
 }
 
 /* SELECTION HIGHLIGHT */
@@ -146,7 +151,29 @@ a.link:hover {
 
 /* MOBILE OPTIMIZATION */
 @media (max-width: 600px) {
-    body { margin-top: 40px; padding: 20px; }
+    body .vertical-nav {
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 12px 16px !important;
+        flex-direction: row !important;
+        gap: 4px !important;
+        overflow-x: auto !important;
+        border-right: 0 !important;
+        border-bottom: 1px solid var(--border) !important;
+        z-index: 1000 !important;
+    }
+    body .nav-item {
+        flex: 0 0 auto;
+        padding: 8px 10px;
+    }
+    body .content {
+        width: 100%;
+        margin: 64px 0 0;
+        padding: 28px 20px 56px;
+        transform: none;
+    }
     .item { flex-direction: column; gap: 4px; margin-bottom: 28px; }
     .meta { margin-bottom: 2px; font-size: 12px; color: var(--accent); }
     header { flex-direction: row; align-items: center; }

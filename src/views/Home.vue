@@ -18,15 +18,22 @@
         <div class="header-text">
           <h1>Kudzaishe George Zharare</h1>
           <div class="bio">
-            Software Engineer. Systems Architect. MIT Alum.<br>
+            Founder and engineer · Cape Town<br>
           </div>
         </div>
       </header>
 
       <div class="welcome-text">
         <p>
-          Systems architect specializing in distributed systems, digital identity, and AI agent protocols.
-          Currently building payment infrastructure at Cleva, previously co-founded FlexID (acquired by CBZ Bank).
+          I build financial and trust infrastructure for markets that global
+          technology treats as edge cases. I am currently building Poza, a money
+          app and authorization layer for African users and AI agents.
+        </p>
+        <p>
+          Previously, I built and sold Mutapa Marketplace to CBZ Holdings, led
+          identity and compliance engineering at Cleva (YC W24), and served as
+          CTO and later Co-Founder of FlexID. I studied computer science and
+          mathematics at MIT.
         </p>
       </div>
     </main>

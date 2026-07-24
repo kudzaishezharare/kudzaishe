@@ -11,13 +11,29 @@
 
     <!-- MAIN CONTENT -->
     <main class="content">
-      <h1>Projects</h1>
+      <h1>Selected Work</h1>
+
+      <div class="item">
+        <div class="meta">Company</div>
+        <div class="details">
+          <a href="https://mutapa.co" class="title">Mutapa</a>
+          <div class="desc">Built from a distributed artisan network into an e-commerce and payments platform. Mutapa Marketplace was acquired by CBZ Holdings and became Zikimall; the Mutapa brand now curates art, objects, and apparel from Cape Town.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="meta">Education</div>
+        <div class="details">
+          <a href="https://github.com/kudzaishezharare/web-games" class="title">Lalela Web Games</a>
+          <div class="desc">A Phaser-based browser platform adapting 202 GCompris educational activities across mathematics, literacy, programming, science, music, accessibility, and strategy. Includes a shared game framework, touch input, local progress, offline support, tests, and CI.</div>
+        </div>
+      </div>
 
       <div class="item">
         <div class="meta">Open Source</div>
         <div class="details">
-          <a href="https://github.com/stalela/bantu-grammar-engine" class="title">Bantu Grammar Engine</a>
-          <div class="desc">Python library for validating Shona text against machine-readable grammar rules using JSON-Logic. Morphological analysis and linguistic validation for Bantu languages.</div>
+          <span class="title">Bantu Grammar Engine</span>
+          <div class="desc">A Python engine that represents Shona grammar as machine-readable JSON-Logic rules, combining morphological analysis with deterministic validation for AI-generated and human-written text.</div>
         </div>
       </div>
 
@@ -25,23 +41,15 @@
         <div class="meta">Protocol</div>
         <div class="details">
           <a href="https://github.com/google-agentic-commerce/AP2" class="title">Agent Payments Protocol (AP2)</a>
-          <div class="desc">Enabling agent-to-agent commerce through automated payment flows. Google-led specification for AI agents to conduct financial transactions securely.</div>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="meta">Extension</div>
-        <div class="details">
-          <a href="https://github.com/stalela/a2a-x402" class="title">A2A x402 Extension</a>
-          <div class="desc">Cryptocurrency payments extension for the A2A protocol. Enables agents to monetize services through on-chain payments, reviving HTTP 402 for decentralized agent ecosystems.</div>
+          <div class="desc">Contributor to Google's open protocol for secure AI-agent payments, including work to represent African payment methods and mobile-money flows.</div>
         </div>
       </div>
 
       <div class="item">
         <div class="meta">Geospatial</div>
         <div class="details">
-          <a href="https://github.com/kudzigeorge/gosper-open-location-code" class="title">Gosper Open Location Code</a>
-          <div class="desc">Pure-Python hierarchical geocoder using Gosper curves. Encodes lat/lng coordinates into compact deterministic strings with seven-way branching pattern. Includes code shortening, recovery, and OLC comparison.</div>
+          <span class="title">Gosper Open Location Code</span>
+          <div class="desc">An experimental offline geocoder that encodes coordinates into compact, hierarchical location codes for places without standardized street addresses or complete digital maps.</div>
         </div>
       </div>
     </main>

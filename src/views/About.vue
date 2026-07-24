@@ -17,10 +17,27 @@
         <div class="header-text">
           <h1>Kudzaishe George Zharare</h1>
           <div class="bio">
-            Software Engineer. Systems Architect. MIT Alum.<br>
+            Founder and engineer · Cape Town<br>
           </div>
         </div>
       </header>
+
+      <section>
+        <h2>About</h2>
+        <p class="statement">
+          I am a Zimbabwean founder and engineer based in Cape Town. For the
+          past eight years, I have built e-commerce, payments, identity, public
+          infrastructure, and financial-compliance systems across African
+          markets.
+        </p>
+        <p class="statement">
+          My work starts with a recurring question: what must change when
+          systems designed around complete maps, reliable connectivity,
+          standardized institutions, and globally trusted identities meet a
+          different operating reality? I build from those local constraints,
+          while designing products and protocols that can operate globally.
+        </p>
+      </section>
 
       <!-- EDUCATION -->
       <section>
@@ -29,7 +46,25 @@
           <div class="meta">MIT</div>
           <div class="details">
             <span class="title">B.S. Computer Science & Math</span>
-            <div class="desc">Research at MIT Media Lab & CSAIL.</div>
+            <div class="desc">Undergraduate research in MIT CSAIL's Computational Fabrication Group. President of the MIT African Students Association and inaugural chair of the Africa Learning Circle.</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Selected Recognition</h2>
+        <div class="item">
+          <div class="meta">2022</div>
+          <div class="details">
+            <span class="title">World Economic Forum Technology Pioneer</span>
+            <div class="desc">FlexID was selected among the Forum's global cohort of early-stage technology companies.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="meta">2019</div>
+          <div class="details">
+            <a href="https://news.mit.edu/2019/mit-african-students-association-1003" class="title">MIT Golden Beaver Award</a>
+            <div class="desc">The MIT African Students Association received the award for organizational excellence during my presidency.</div>
           </div>
         </div>
       </section>
@@ -40,8 +75,7 @@
         <div class="contact-links">
           <a href="mailto:kudzi@alum.mit.edu" class="link">Email</a>
           <a href="https://linkedin.com/in/kudzigeorge" class="link">LinkedIn</a>
-          <a href="https://github.com/kudzigeorge" class="link">GitHub</a>
-          <a href="/resume.pdf" class="link">Resume.pdf</a>
+          <a href="https://github.com/kudzaishezharare" class="link">GitHub</a>
         </div>
       </div>
     </main>
@@ -168,6 +202,12 @@ h2 {
   color: var(--text-secondary);
   font-size: 13.5px;
   line-height: 1.5;
+}
+
+.statement {
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin: 0 0 18px;
 }
 
 .contact-section {

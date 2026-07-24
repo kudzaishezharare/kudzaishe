@@ -11,7 +11,15 @@
 
     <!-- MAIN CONTENT -->
     <main class="content">
-      <h1>Blogs</h1>
+      <h1>Writing</h1>
+
+      <div class="item">
+        <div class="meta">2025-11-24</div>
+        <div class="details">
+          <router-link to="/article" class="title">Context-Aware AI in Low-Bandwidth Environments</router-link>
+          <div class="desc">Designing resilient agents where connectivity, devices, and infrastructure cannot be assumed.</div>
+        </div>
+      </div>
 
       <div class="item">
         <div class="meta">2023-05-15</div>
@@ -21,21 +29,6 @@
         </div>
       </div>
 
-      <div class="item">
-        <div class="meta">2025-11-24</div>
-        <div class="details">
-          <router-link to="/article" class="title">Context-Aware AI in Low Bandwidth Environments</router-link>
-          <div class="desc">How to deploy resilient agents where connectivity is intermittent.</div>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="meta">2025-08-14</div>
-        <div class="details">
-          <a href="#" class="title">The Future of Digital Identity in Africa</a>
-          <div class="desc">Why mobile-first identity rails will leapfrog legacy systems.</div>
-        </div>
-      </div>
     </main>
   </div>
 </template>
