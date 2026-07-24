@@ -43,7 +43,6 @@ export const projects = [
       { label: 'Current Mutapa collection', href: 'https://mutapa.co' }
     ],
     media: [
-      { type: 'image', title: 'Mutapa today', src: '/projects/mutapa/mutapa-current.png', alt: 'Current Mutapa curated commerce website' },
       wearDeck,
       creativeIndustriesDeck
     ]
