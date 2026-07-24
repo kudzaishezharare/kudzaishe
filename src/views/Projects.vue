@@ -12,53 +12,49 @@
     <!-- MAIN CONTENT -->
     <main class="content">
       <h1>Selected Work</h1>
+      <p class="project-intro">Open a project for the story, implementation notes, links, and original media.</p>
 
-      <div class="item">
-        <div class="meta">Company</div>
+      <div v-for="project in projects" :key="project.id" class="item">
+        <div class="meta">{{ project.category }}</div>
         <div class="details">
-          <a href="https://mutapa.co" class="title">Mutapa</a>
-          <div class="desc">Built from a distributed artisan network into an e-commerce and payments platform. Mutapa Marketplace was acquired by CBZ Holdings and became Zikimall; the Mutapa brand now curates art, objects, and apparel from Cape Town.</div>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="meta">Education</div>
-        <div class="details">
-          <a href="https://github.com/kudzaishezharare/web-games" class="title">Lalela Web Games</a>
-          <div class="desc">A Phaser-based browser platform adapting 202 GCompris educational activities across mathematics, literacy, programming, science, music, accessibility, and strategy. Includes a shared game framework, touch input, local progress, offline support, tests, and CI.</div>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="meta">Open Source</div>
-        <div class="details">
-          <span class="title">Bantu Grammar Engine</span>
-          <div class="desc">A Python engine that represents Shona grammar as machine-readable JSON-Logic rules, combining morphological analysis with deterministic validation for AI-generated and human-written text.</div>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="meta">Protocol</div>
-        <div class="details">
-          <a href="https://github.com/google-agentic-commerce/AP2" class="title">Agent Payments Protocol (AP2)</a>
-          <div class="desc">Contributor to Google's open protocol for secure AI-agent payments, including work to represent African payment methods and mobile-money flows.</div>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="meta">Geospatial</div>
-        <div class="details">
-          <span class="title">Gosper Open Location Code</span>
-          <div class="desc">An experimental offline geocoder that encodes coordinates into compact, hierarchical location codes for places without standardized street addresses or complete digital maps.</div>
+          <button class="project-title" type="button" @click="openProject(project.id)">
+            {{ project.title }}
+            <span aria-hidden="true">↗</span>
+          </button>
+          <div class="desc">{{ project.summary }}</div>
         </div>
       </div>
     </main>
+
+    <ProjectModal :project="selectedProject" @close="closeProject" />
   </div>
 </template>
 
 <script>
+import ProjectModal from '../components/ProjectModal.vue'
+import { projects } from '../data/projects'
+
 export default {
-  name: 'Projects'
+  name: 'Projects',
+  components: { ProjectModal },
+  data() {
+    return { projects }
+  },
+  computed: {
+    selectedProject() {
+      return this.projects.find(project => project.id === this.$route.query.project) || null
+    }
+  },
+  methods: {
+    openProject(projectId) {
+      this.$router.push({ query: { ...this.$route.query, project: projectId } })
+    },
+    closeProject() {
+      const query = { ...this.$route.query }
+      delete query.project
+      this.$router.push({ query })
+    }
+  }
 }
 </script>
 
@@ -113,6 +109,12 @@ export default {
   letter-spacing: -0.5px;
 }
 
+.project-intro {
+  margin: -18px 0 40px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
 h2 {
   font-size: 15px;
   text-transform: uppercase;
@@ -141,17 +143,32 @@ h2 {
   flex: 1;
 }
 
-.title {
+.project-title {
+  padding: 0;
+  border: 0;
+  background: transparent;
   font-weight: 700;
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 6px;
   color: var(--text-primary);
-  text-decoration: none;
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
   transition: color 0.2s ease;
+  cursor: pointer;
 }
 
-a.title:hover {
+.project-title span {
   color: var(--accent);
+  font-size: 12px;
+}
+
+.project-title:hover,
+.project-title:focus-visible {
+  color: var(--accent);
+  outline: none;
 }
 
 .desc {

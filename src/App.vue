@@ -1,12 +1,16 @@
 <template>
   <div id="app">
     <router-view />
+    <SiteFooter />
   </div>
 </template>
 
 <script>
+import SiteFooter from './components/SiteFooter.vue'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: { SiteFooter }
 }
 </script>
 
