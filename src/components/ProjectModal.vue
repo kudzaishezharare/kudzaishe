@@ -29,7 +29,9 @@
             <section v-if="project.media.length" class="project-section">
               <h3>Media</h3>
               <div class="media-grid">
-                <figure v-for="item in project.media" :key="item.src" class="media-item" :class="`media-${item.type}`">
+                <template v-for="item in project.media" :key="item.src || item.title">
+                  <SlideDeck v-if="item.type === 'slides'" :deck="item" />
+                  <figure v-else class="media-item" :class="`media-${item.type}`">
                   <a v-if="item.type === 'image'" :href="item.src" target="_blank" rel="noreferrer">
                     <img :src="item.src" :alt="item.alt || item.title">
                   </a>
@@ -42,7 +44,8 @@
                     <small>{{ item.meta || 'Open document' }}</small>
                   </a>
                   <figcaption v-if="item.type === 'image' || item.type === 'video'">{{ item.title }}</figcaption>
-                </figure>
+                  </figure>
+                </template>
               </div>
             </section>
           </div>
@@ -53,8 +56,11 @@
 </template>
 
 <script>
+import SlideDeck from './SlideDeck.vue'
+
 export default {
   name: 'ProjectModal',
+  components: { SlideDeck },
   props: {
     project: {
       type: Object,

@@ -1,3 +1,22 @@
+const slidePages = (directory, count) =>
+  Array.from({ length: count }, (_, index) => `${directory}/page-${String(index + 1).padStart(2, '0')}.jpg`)
+
+const wearDeck = {
+  type: 'slides',
+  title: 'Mutapa Wear lookbook and model',
+  pages: slidePages('/projects/mutapa/wear-slides', 28),
+  pdf: '/projects/mutapa/motapa-overview.pdf',
+  meta: 'Historical lookbook · 28 pages'
+}
+
+const creativeIndustriesDeck = {
+  type: 'slides',
+  title: 'Investing in the Creative Industries',
+  pages: slidePages('/projects/mutapa/creative-industries-slides', 5),
+  pdf: '/projects/mutapa/investing-in-creative-industries.pdf',
+  meta: 'Historical strategy deck · 5 pages'
+}
+
 export const projects = [
   {
     id: 'mutapa-wear',
@@ -25,8 +44,8 @@ export const projects = [
     ],
     media: [
       { type: 'image', title: 'Mutapa today', src: '/projects/mutapa/mutapa-current.png', alt: 'Current Mutapa curated commerce website' },
-      { type: 'pdf', title: 'Mutapa Wear lookbook and model', src: '/projects/mutapa/motapa-overview.pdf', meta: 'Historical lookbook · PDF' },
-      { type: 'pdf', title: 'Investing in the Creative Industries', src: '/projects/mutapa/investing-in-creative-industries.pdf', meta: 'Historical strategy deck · PDF' }
+      wearDeck,
+      creativeIndustriesDeck
     ]
   },
   {
@@ -59,7 +78,7 @@ export const projects = [
       { label: 'Banking 4.1 essay', href: 'https://medium.com/@kudzigeorge/hop-on-spaceship-and-join-the-banking-4-1-movement-4f88ca2e74f1' }
     ],
     media: [
-      { type: 'pdf', title: 'Mutapa operating model', src: '/projects/mutapa/motapa-overview.pdf', meta: 'Historical deck · PDF' }
+      { ...wearDeck, title: 'Mutapa operating model' }
     ]
   },
   {
