@@ -1,5 +1,11 @@
 {
   "rewrites": [
+    { "source": "/about", "destination": "/about/index.html" },
+    { "source": "/experience", "destination": "/experience/index.html" },
+    { "source": "/projects", "destination": "/projects/index.html" },
+    { "source": "/blogs", "destination": "/blogs/index.html" },
+    { "source": "/article", "destination": "/article/index.html" },
+    { "source": "/flexid", "destination": "/flexid/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
