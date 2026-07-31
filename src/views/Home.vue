@@ -13,7 +13,7 @@
     <main class="content">
       <!-- HEADER -->
       <header class="landing-header">
-        <img src="/kudzigeorge.jpg" alt="Kudzaishe Zharare" class="avatar">
+        <img src="/kudzigeorge-20260731.jpg" alt="Kudzaishe Zharare" class="avatar">
 
         <div class="header-text">
           <h1>Kudzaishe George Zharare</h1>
@@ -100,8 +100,8 @@ export default {
 }
 
 .avatar {
-  width: 72px;
-  height: 72px;
+  width: 144px;
+  height: 144px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--accent);
