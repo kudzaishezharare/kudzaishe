@@ -18,6 +18,16 @@
         <a href="https://medium.com/@kudzigeorge">Medium profile</a>
       </p>
 
+      <h2>At Poza Insights</h2>
+
+      <div class="item">
+        <div class="meta">2026-08-15</div>
+        <div class="details">
+          <a href="https://poza.co/insights/agentic-payments-proving-permission/" class="title">AI agents can spend money. The hard part is proving they had permission.</a>
+          <div class="desc">A four-year follow-up to Banking 4.1 on delegated commerce, bounded mandates, payment authority, and the infrastructure required when software can act on a person's behalf.</div>
+        </div>
+      </div>
+
       <h2>On this site</h2>
 
       <div class="item">
