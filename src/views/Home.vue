@@ -27,7 +27,8 @@
         <p>
           I build financial and trust infrastructure for markets that global
           technology treats as edge cases. I am currently building Poza, a money
-          app and authorization layer for African users and AI agents.
+          app and authorization layer for African users and AI agents. I explore
+          that problem in <a href="https://poza.co/insights/agentic-payments-proving-permission/">AI agents can spend money. The hard part is proving they had permission.</a>
         </p>
         <p>
           Previously, I built and sold Mutapa Marketplace to CBZ Holdings, led
@@ -130,5 +131,9 @@ export default {
   line-height: 1.6;
   color: var(--text-secondary);
   margin: 0;
+}
+
+.welcome-text a {
+  color: var(--accent);
 }
 </style>
