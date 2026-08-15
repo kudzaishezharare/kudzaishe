@@ -24,7 +24,7 @@
       <div class="item">
         <div class="meta">2023 — 2025</div>
         <div class="details">
-          <a href="https://getcleva.com" class="title">Lead Engineer @ Cleva (YC W24)</a>
+          <a href="https://getcleva.com" class="title" target="_blank" rel="noopener noreferrer">Lead Engineer @ Cleva (YC W24)</a>
           <div class="desc">Led security, identity, and compliance engineering for a USD banking platform supporting 500,000+ users. Built automated KYC, liveness, transaction-monitoring, resilient onboarding, and internal mobile-testing systems.</div>
         </div>
       </div>
@@ -32,7 +32,7 @@
       <div class="item">
         <div class="meta">2021 — 2023</div>
         <div class="details">
-          <a href="https://techcrunch.com/2022/05/26/zimbabwe-flexid-algorand-funding-decentralized-identity/" class="title">CTO, later Co-Founder @ FlexID</a>
+          <a href="https://techcrunch.com/2022/05/26/zimbabwe-flexid-algorand-funding-decentralized-identity/" class="title" target="_blank" rel="noopener noreferrer">CTO, later Co-Founder @ FlexID</a>
           <div class="desc">Built a self-sovereign identity wallet across Android, web, and WhatsApp using Algorand, verifiable credentials, zero-knowledge proofs, and MPC key management. FlexID was named a World Economic Forum Technology Pioneer.</div>
         </div>
       </div>
@@ -40,7 +40,7 @@
       <div class="item">
         <div class="meta">2019 — 2021</div>
         <div class="details">
-          <a href="https://mutapa.co" class="title">Founder @ Motapa, trading as Mutapa</a>
+          <a href="https://mutapa.co" class="title" target="_blank" rel="noopener noreferrer">Founder @ Motapa, trading as Mutapa</a>
           <div class="desc">Grew an artisan network into an e-commerce and payments platform, delivered integrations for 200 major Zimbabwean merchants and institutions, and sold Mutapa Marketplace to CBZ Holdings. It continues as Zikimall.</div>
         </div>
       </div>

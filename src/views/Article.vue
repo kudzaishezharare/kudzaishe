@@ -94,7 +94,7 @@
     <br>
 
     <p style="font-size: 13px; color: var(--text-secondary);">
-      <em>Adapted in 2025 from <a href="https://medium.com/mitafricans/applied-mathematics-in-pre-colonial-african-settlements-4067ceb048cf">Applied Mathematics in Pre-Colonial African Settlements</a>, originally published by MIT Africans in 2020.</em>
+      <em>Adapted in 2025 from <a href="https://medium.com/mitafricans/applied-mathematics-in-pre-colonial-african-settlements-4067ceb048cf" target="_blank" rel="noopener noreferrer">Applied Mathematics in Pre-Colonial African Settlements</a>, originally published by MIT Africans in 2020.</em>
     </p>
   </div>
 </template>

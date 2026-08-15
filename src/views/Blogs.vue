@@ -15,7 +15,7 @@
       <p class="intro">
         Essays on African financial infrastructure, digital identity, and the
         computation embedded in local knowledge systems.
-        <a href="https://medium.com/@kudzigeorge">Medium profile</a>
+        <a href="https://medium.com/@kudzigeorge" target="_blank" rel="noopener noreferrer">Medium profile</a>
       </p>
 
       <h2>At Poza Insights</h2>
@@ -23,7 +23,7 @@
       <div class="item">
         <div class="meta">2026-08-15</div>
         <div class="details">
-          <a href="https://poza.co/insights/agentic-payments-proving-permission/" class="title">AI agents can spend money. The hard part is proving they had permission.</a>
+          <a href="https://poza.co/insights/agentic-payments-proving-permission/" class="title" target="_blank" rel="noopener noreferrer">AI agents can spend money. The hard part is proving they had permission.</a>
           <div class="desc">A four-year follow-up to Banking 4.1 on delegated commerce, bounded mandates, payment authority, and the infrastructure required when software can act on a person's behalf.</div>
         </div>
       </div>
@@ -51,7 +51,7 @@
       <div class="item">
         <div class="meta">2022-03-19</div>
         <div class="details">
-          <a href="https://medium.com/flexid/a-business-trip-with-flexid-ssid-7aff5407fb28" class="title">A Business Trip with FlexID SSID</a>
+          <a href="https://medium.com/flexid/a-business-trip-with-flexid-ssid-7aff5407fb28" class="title" target="_blank" rel="noopener noreferrer">A Business Trip with FlexID SSID</a>
           <div class="desc">A concrete journey through how a user-controlled digital wallet could handle reservations, identity proofs, access, and credential exchange.</div>
         </div>
       </div>
@@ -59,7 +59,7 @@
       <div class="item">
         <div class="meta">2022-03-13</div>
         <div class="details">
-          <a href="https://medium.com/@kudzigeorge/hop-on-spaceship-and-join-the-banking-4-1-movement-4f88ca2e74f1" class="title">Banking 4.1</a>
+          <a href="https://medium.com/@kudzigeorge/hop-on-spaceship-and-join-the-banking-4-1-movement-4f88ca2e74f1" class="title" target="_blank" rel="noopener noreferrer">Banking 4.1</a>
           <div class="desc">Why African financial infrastructure should be interoperable, developer-friendly, and designed for broader participation rather than branch-era assumptions.</div>
         </div>
       </div>
@@ -67,7 +67,7 @@
       <div class="item">
         <div class="meta">2022-01-30</div>
         <div class="details">
-          <a href="https://medium.com/@kudzigeorge/for-centuries-technology-and-finance-have-lived-in-simpatic-hand-in-glove-relationship-2018b71b09c0" class="title">This Decade Will Be Radically Different in African Fintech</a>
+          <a href="https://medium.com/@kudzigeorge/for-centuries-technology-and-finance-have-lived-in-simpatic-hand-in-glove-relationship-2018b71b09c0" class="title" target="_blank" rel="noopener noreferrer">This Decade Will Be Radically Different in African Fintech</a>
           <div class="desc">An early argument for embedded payments, open APIs, and locally responsive technology choices, written while building Mutapa.</div>
         </div>
       </div>
@@ -75,12 +75,12 @@
       <div class="item">
         <div class="meta">2020-01-14</div>
         <div class="details">
-          <a href="https://medium.com/mitafricans/applied-mathematics-in-pre-colonial-african-settlements-4067ceb048cf" class="title">Applied Mathematics in Pre-Colonial African Settlements</a>
+          <a href="https://medium.com/mitafricans/applied-mathematics-in-pre-colonial-african-settlements-4067ceb048cf" class="title" target="_blank" rel="noopener noreferrer">Applied Mathematics in Pre-Colonial African Settlements</a>
           <div class="desc">Fractal geometry, recursion, and self-similar social organization in Southern African settlement architecture.</div>
         </div>
       </div>
 
-      <a href="https://medium.com/@kudzigeorge" class="profile-link">View Medium profile →</a>
+      <a href="https://medium.com/@kudzigeorge" class="profile-link" target="_blank" rel="noopener noreferrer">View Medium profile →</a>
 
     </main>
   </div>

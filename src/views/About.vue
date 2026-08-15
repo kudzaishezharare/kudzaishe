@@ -63,7 +63,7 @@
         <div class="item">
           <div class="meta">2019</div>
           <div class="details">
-            <a href="https://news.mit.edu/2019/mit-african-students-association-1003" class="title">MIT Golden Beaver Award</a>
+            <a href="https://news.mit.edu/2019/mit-african-students-association-1003" class="title" target="_blank" rel="noopener noreferrer">MIT Golden Beaver Award</a>
             <div class="desc">The MIT African Students Association received the award for organizational excellence during my presidency.</div>
           </div>
         </div>
@@ -74,8 +74,8 @@
         <h2>Contact</h2>
         <div class="contact-links">
           <a href="mailto:kudzi@alum.mit.edu" class="link">Email</a>
-          <a href="https://linkedin.com/in/kudzigeorge" class="link">LinkedIn</a>
-          <a href="https://github.com/kudzaishezharare" class="link">GitHub</a>
+          <a href="https://linkedin.com/in/kudzigeorge" class="link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/kudzaishezharare" class="link" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
     </main>

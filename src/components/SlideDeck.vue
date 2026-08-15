@@ -12,7 +12,7 @@
         <h4>{{ deck.title }}</h4>
         <span>{{ deck.meta }}</span>
       </div>
-      <a :href="deck.pdf" target="_blank" rel="noreferrer">Open PDF ↗</a>
+      <a :href="deck.pdf" target="_blank" rel="noopener noreferrer">Open PDF ↗</a>
     </header>
 
     <div class="slide-stage">

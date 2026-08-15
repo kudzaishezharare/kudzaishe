@@ -22,7 +22,7 @@
             <section v-if="project.links.length" class="project-section">
               <h3>Links</h3>
               <div class="project-links">
-                <a v-for="link in project.links" :key="link.href" :href="link.href" target="_blank" rel="noreferrer">{{ link.label }} ↗</a>
+                <a v-for="link in project.links" :key="link.href" :href="link.href" target="_blank" rel="noopener noreferrer">{{ link.label }} ↗</a>
               </div>
             </section>
 
@@ -32,13 +32,13 @@
                 <template v-for="item in project.media" :key="item.src || item.title">
                   <SlideDeck v-if="item.type === 'slides'" :deck="item" />
                   <figure v-else class="media-item" :class="`media-${item.type}`">
-                  <a v-if="item.type === 'image'" :href="item.src" target="_blank" rel="noreferrer">
+                  <a v-if="item.type === 'image'" :href="item.src" target="_blank" rel="noopener noreferrer">
                     <img :src="item.src" :alt="item.alt || item.title">
                   </a>
                   <video v-else-if="item.type === 'video'" controls preload="metadata">
                     <source :src="item.src">
                   </video>
-                  <a v-else class="document-link" :href="item.src" target="_blank" rel="noreferrer">
+                  <a v-else class="document-link" :href="item.src" target="_blank" rel="noopener noreferrer">
                     <span class="document-type">{{ item.type.toUpperCase() }}</span>
                     <span>{{ item.title }}</span>
                     <small>{{ item.meta || 'Open document' }}</small>
