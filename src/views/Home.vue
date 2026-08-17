@@ -13,7 +13,15 @@
     <main class="content">
       <!-- HEADER -->
       <header class="landing-header">
-        <img src="/kudzigeorge-20260731.jpg" alt="Kudzaishe Zharare" class="avatar">
+        <div class="avatar-wrap">
+          <img
+            src="/kudzigeorge-avatar.jpg"
+            alt="Kudzaishe Zharare"
+            class="avatar"
+            width="144"
+            height="144"
+          >
+        </div>
 
         <div class="header-text">
           <h1>Kudzaishe George Zharare</h1>
@@ -100,13 +108,21 @@ export default {
   padding-bottom: 30px;
 }
 
-.avatar {
+.avatar-wrap {
+  flex-shrink: 0;
   width: 144px;
   height: 144px;
   border-radius: 50%;
-  object-fit: cover;
+  overflow: hidden;
   border: 2px solid var(--accent);
   background-color: var(--border);
+}
+
+.avatar {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .header-text h1 {
