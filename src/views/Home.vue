@@ -31,7 +31,8 @@
           that problem in <a href="https://poza.co/insights/agentic-payments-proving-permission/" target="_blank" rel="noopener noreferrer">AI agents can spend money. The hard part is proving they had permission.</a>
         </p>
         <p>
-          Previously, I built and sold Mutapa Marketplace to CBZ Holdings, led
+          Previously, I built and sold Mutapa Marketplace to CBZ Holdings, where
+          it continues as <a href="https://zikimall.com/" target="_blank" rel="noopener noreferrer">Zikimall</a>. I led
           identity and compliance engineering at Cleva (YC W24), and served as
           CTO and later Co-Founder of FlexID. I studied computer science and
           mathematics at MIT.
