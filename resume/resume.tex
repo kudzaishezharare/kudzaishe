@@ -1,0 +1,32 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[10pt, a4paper]{awesome-cv}
+
+\geometry{left=1.35cm, top=.72cm, right=1.35cm, bottom=1.55cm, footskip=.45cm}
+\fontdir[fonts/]
+\colorlet{awesome}{awesome-red}
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\name{Kudzaishe}{Zharare}
+\position{Software Engineer{\enskip\cdotp\enskip}AI Systems{\enskip\cdotp\enskip}Fintech Infrastructure}
+\address{Cape Town, South Africa}
+\mobile{(+27) 612 673 163}
+\email{kudzi@alum.mit.edu}
+\homepage{www.kudzaishe.com}
+\github{kudzaishezharare}
+
+\begin{document}
+\makecvheader[C]
+\makecvfooter
+  {September 2026}
+  {Kudzaishe Zharare~~~·~~~Résumé}
+  {\thepage}
+
+\input{resume/summary.tex}
+\input{resume/experience.tex}
+\clearpage
+\input{resume/skills.tex}
+\input{resume/projects.tex}
+\input{resume/education.tex}
+\end{document}
