@@ -1,23 +1,17 @@
 <template>
   <div class="page-container">
     <!-- NAVIGATION -->
-    <nav class="vertical-nav">
-      <router-link to="/" class="nav-item">Home</router-link>
-      <router-link to="/experience" class="nav-item">Experience</router-link>
-      <router-link to="/about" class="nav-item active">About</router-link>
-      <router-link to="/projects" class="nav-item">Projects</router-link>
-      <router-link to="/blogs" class="nav-item">Blogs</router-link>
-    </nav>
+    <SiteNav />
 
     <!-- MAIN CONTENT -->
-    <main class="content">
+    <main class="content" id="main-content" tabindex="-1">
       <!-- HEADER -->
       <header class="about-header">
         <img src="/kudzigeorge.jpg" alt="Kudzaishe Zharare" class="avatar">
         <div class="header-text">
           <h1>Kudzaishe George Zharare</h1>
           <div class="bio">
-            Founder and engineer · Cape Town<br>
+            Software &amp; AI engineer · Cape Town<br>
           </div>
         </div>
       </header>
@@ -25,10 +19,10 @@
       <section>
         <h2>About</h2>
         <p class="statement">
-          I am a Zimbabwean founder and engineer based in Cape Town. For the
-          past eight years, I have built e-commerce, payments, identity, public
-          infrastructure, and financial-compliance systems across African
-          markets.
+          I am a Zimbabwean software engineer and MIT graduate based in Cape Town.
+          I have built e-commerce, payments, identity, public infrastructure,
+          and financial-compliance systems across African markets, with work
+          spanning backend services, web applications, and mobile products.
         </p>
         <p class="statement">
           My work starts with a recurring question: what must change when
@@ -39,6 +33,11 @@
         </p>
       </section>
 
+      <section>
+        <h2>Engineering &amp; delivery</h2>
+        <p class="statement">I have led identity and compliance engineering at Cleva, served as CTO and later Co-Founder of FlexID, and built Mutapa Marketplace, which was acquired by CBZ Holdings. At Poza, I am developing financial applications and authorization for agent-proposed actions.</p>
+        <p class="statement">I am open to engineering roles and scoped contract projects. <router-link to="/work">See how we can work together.</router-link></p>
+      </section>
       <!-- EDUCATION -->
       <section>
         <h2>Education</h2>
@@ -83,53 +82,16 @@
 </template>
 
 <script>
+import SiteNav from '../components/SiteNav.vue'
 export default {
-  name: 'About'
+  name: 'About',
+  components: { SiteNav }
 }
 </script>
 
 <style scoped>
-.page-container {
-  display: flex;
-  min-height: 100vh;
-}
 
-.vertical-nav {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 200px;
-  background: var(--bg-color);
-  border-right: 1px solid var(--border);
-  padding: 80px 24px 24px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
 
-.nav-item {
-  color: var(--text-secondary);
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.nav-item:hover,
-.nav-item.active {
-  color: var(--accent);
-  background: rgba(164, 120, 90, 0.1);
-}
-
-.content {
-  margin-left: 200px;
-  max-width: 680px;
-  margin: 80px auto;
-  padding: 24px;
-}
 
 .about-header {
   display: flex;
@@ -183,7 +145,7 @@ h2 {
 .meta {
   flex: 0 0 130px;
   color: var(--text-secondary);
-  font-size: 13px;
+  font-size: 0.875rem;
   font-variant-numeric: tabular-nums;
 }
 
@@ -200,7 +162,7 @@ h2 {
 
 .desc {
   color: var(--text-secondary);
-  font-size: 13.5px;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -219,7 +181,7 @@ h2 {
 .contact-links {
   display: flex;
   gap: 24px;
-  font-size: 13px;
+  font-size: 0.875rem;
 }
 
 .link {
@@ -235,3 +197,4 @@ h2 {
   border-bottom-color: var(--accent);
 }
 </style>
+

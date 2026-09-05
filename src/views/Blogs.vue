@@ -1,16 +1,10 @@
 <template>
   <div class="page-container">
     <!-- NAVIGATION -->
-    <nav class="vertical-nav">
-      <router-link to="/" class="nav-item">Home</router-link>
-      <router-link to="/experience" class="nav-item">Experience</router-link>
-      <router-link to="/about" class="nav-item">About</router-link>
-      <router-link to="/projects" class="nav-item">Projects</router-link>
-      <router-link to="/blogs" class="nav-item active">Blogs</router-link>
-    </nav>
+    <SiteNav />
 
     <!-- MAIN CONTENT -->
-    <main class="content">
+    <main class="content" id="main-content" tabindex="-1">
       <h1>Writing</h1>
       <p class="intro">
         Essays on African financial infrastructure, digital identity, and the
@@ -87,53 +81,16 @@
 </template>
 
 <script>
+import SiteNav from '../components/SiteNav.vue'
 export default {
-  name: 'Blogs'
+  name: 'Blogs',
+  components: { SiteNav }
 }
 </script>
 
 <style scoped>
-.page-container {
-  display: flex;
-  min-height: 100vh;
-}
 
-.vertical-nav {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 200px;
-  background: var(--bg-color);
-  border-right: 1px solid var(--border);
-  padding: 80px 24px 24px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
 
-.nav-item {
-  color: var(--text-secondary);
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.nav-item:hover,
-.nav-item.active {
-  color: var(--accent);
-  background: rgba(164, 120, 90, 0.1);
-}
-
-.content {
-  margin-left: 200px;
-  max-width: 680px;
-  margin: 80px auto;
-  padding: 24px;
-}
 
 .content h1 {
   font-size: 22px;
@@ -157,7 +114,7 @@ export default {
 .content h2 {
   margin: 48px 0 28px;
   color: var(--text-secondary);
-  font-size: 13px;
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -172,7 +129,7 @@ export default {
 .meta {
   flex: 0 0 130px;
   color: var(--text-secondary);
-  font-size: 13px;
+  font-size: 0.875rem;
   font-variant-numeric: tabular-nums;
 }
 
@@ -195,7 +152,7 @@ a.title:hover {
 
 .desc {
   color: var(--text-secondary);
-  font-size: 13.5px;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -206,3 +163,4 @@ a.title:hover {
   text-decoration: none;
 }
 </style>
+

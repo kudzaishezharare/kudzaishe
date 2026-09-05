@@ -6,7 +6,7 @@
     --bg-color: #1C1C1C;        /* Deep Black */
     --text-primary: #F3E4D4;    /* Desert Sand */
     --text-secondary: #9C9288;  /* Dimmed Sand (Calculated for contrast) */
-    --accent: #A4785A;          /* Medium Sand (Links & Highlights) */
+    --accent: #C69776;          /* Medium Sand (Links & Highlights) */
     --border: #332F2D;          /* Lighter Obsidian for lines */
 
     --avatar-size: 72px;
@@ -20,8 +20,8 @@ body {
     background-color: var(--bg-color);
     color: var(--text-primary);
     font-family: 'JetBrains Mono', 'Courier New', monospace;
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.7;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
@@ -327,4 +327,45 @@ code {
     color: var(--text-secondary);
     margin-top: -20px;
     margin-bottom: 40px;
+}
+
+
+/* Shared hiring pages: retain the existing palette and typography. */
+.page-container { padding-left: 200px; min-height: 80vh; }
+body .content { width: min(760px, calc(100% - 64px)); max-width: 760px; margin: 64px auto; padding: 0; transform: none; }
+.site-footer { width: min(760px, calc(100vw - 264px)); font-size: 0.875rem; }
+.home-section > h2, .section-heading h2, .work-content h2 { font-size: 0.875rem; }
+a { color: var(--accent); text-underline-offset: 4px; }
+a, button { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+main:focus { outline: none; }
+button, input { font: inherit; }
+.details, .header-text { min-width: 0; }
+.action-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 0; }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 18px; border: 1px solid var(--accent); border-radius: 4px; text-decoration: none; font: inherit; font-size: 0.875rem; text-align: center; cursor: pointer; }
+.button-primary { color: var(--bg-color); background: var(--accent); font-weight: 700; }
+.button-primary:hover { background: var(--text-primary); border-color: var(--text-primary); }
+.button-secondary { color: var(--text-primary); background: transparent; border-color: var(--border); }
+.button-secondary:hover { border-color: var(--accent); }
+.resource-row { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 20px; font-size: 0.875rem; }
+.file-note, .enquiry-note { color: var(--text-secondary); font-size: 0.875rem; }
+.enquiry-note { margin: 20px 0 0; line-height: 1.8; }
+.enquiry-note a { overflow-wrap: anywhere; }
+.skip-link { position: fixed; top: 8px; left: 8px; z-index: 2000; transform: translateY(-200%); padding: 10px 16px; background: var(--text-primary); color: var(--bg-color); }
+.skip-link:focus { transform: translateY(0); }
+@media (max-width: 900px) {
+  .page-container { padding-left: 0; }
+  body .content { margin: 36px auto 56px; }
+  .site-footer { width: min(760px, calc(100% - 64px)); transform: none; }
+}
+@media (max-width: 600px) {
+  body .content { width: calc(100% - 40px); padding: 0; }
+  body .content .item { flex-direction: column; gap: 8px; }
+  body .content .meta { flex: 0 0 auto; font-size: 0.875rem; }
+  .site-footer { width: calc(100% - 40px); margin: 0 auto 32px; }
+  .contact-links { flex-wrap: wrap; }
+  .action-row .button { flex: 1 1 180px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="article-content">
+  <main class="article-content" id="main-content" tabindex="-1">
     <router-link to="/" class="back-link">← Back to Home</router-link>
 
     <!-- HEADLINE -->
@@ -183,7 +183,7 @@
     <p style="font-size: 13px; color: var(--text-secondary);">
       <em>Originally published as part of FlexID's technical whitepaper (2021-2023). Co-founded by Kudzaishe Zharare.</em>
     </p>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -249,3 +249,4 @@ export default {
   color: var(--text-secondary);
 }
 </style>
+

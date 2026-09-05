@@ -3,20 +3,24 @@ export const defaultImage = `${siteUrl}/social-card.jpg`
 
 export const seoByPath = {
   '/': {
-    title: 'Kudzaishe Zharare · Founder and Engineer',
-    description: 'Zimbabwean founder and engineer building financial and trust infrastructure from Cape Town.'
+    title: 'Kudzaishe Zharare · Software & AI Engineer',
+    description: 'Software and AI engineer in Cape Town. Backend systems, AI integrations, payments, and identity. Open to engineering roles and contract projects.'
+  },
+  '/work': {
+    title: 'Engineering Roles & Contract Projects · Kudzaishe Zharare',
+    description: 'Hire Kudzaishe Zharare for engineering roles or scoped contracts in backend systems, AI integrations, identity, payments, and architecture reviews.'
   },
   '/about': {
     title: 'About · Kudzaishe Zharare',
-    description: 'About Kudzaishe George Zharare, a Zimbabwean founder, MIT graduate, and engineer based in Cape Town.'
+    description: 'About Kudzaishe George Zharare, a software and AI engineer, MIT graduate, and former FlexID CTO based in Cape Town.'
   },
   '/experience': {
     title: 'Experience · Kudzaishe Zharare',
-    description: 'Founder and engineering experience across Poza, Cleva, FlexID, Mutapa, and the World Bank in African fintech, identity, and public infrastructure.'
+    description: 'Engineering and technical leadership across Cleva, FlexID, Mutapa, Poza, and the World Bank. Backend systems, identity, payments, and applications.'
   },
   '/projects': {
     title: 'Selected Work · Kudzaishe Zharare',
-    description: 'Selected work spanning Mutapa, African payments, Lalela Web Games, AI-agent payment protocols, Shona language tooling, and geospatial systems.'
+    description: 'Engineering case studies across Cleva, FlexID, Mutapa, and Poza, plus public applications and research prototypes.'
   },
   '/blogs': {
     title: 'Writing · Kudzaishe Zharare',
@@ -31,3 +35,4 @@ export const seoByPath = {
     description: 'A technical essay on verifiable credentials, pricing trust, and insurable digital identity.'
   }
 }
+

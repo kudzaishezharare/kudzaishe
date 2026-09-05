@@ -17,7 +17,7 @@ const creativeIndustriesDeck = {
   meta: 'Historical strategy deck · 5 pages'
 }
 
-export const projects = [
+const existingProjects = [
   {
     id: 'mutapa-wear',
     category: 'Commerce',
@@ -155,3 +155,109 @@ export const projects = [
     media: []
   }
 ]
+
+
+const engineeringProjects = [
+  {
+    "id": "cleva",
+    "category": "Identity",
+    "title": "Cleva: identity & compliance systems",
+    "summary": "Led identity and compliance engineering, including automated KYC, liveness verification, transaction monitoring, and onboarding.",
+    "period": "2023 to 2025",
+    "stage": "Professional delivery",
+    "brief": "As Lead Engineer at Cleva (YC W24), I worked on the security, identity, and compliance systems behind a USD banking platform.",
+    "sections": [
+      {
+        "title": "Problem",
+        "body": "Onboarding needed to verify customers, apply compliance rules, and handle retries and review paths across web and mobile."
+      },
+      {
+        "title": "My contribution",
+        "body": "Led security, identity, and compliance engineering. Built automated KYC, liveness, transaction-monitoring, resilient onboarding, and internal mobile-testing systems."
+      },
+      {
+        "title": "Delivery context",
+        "body": "Built verification and monitoring capabilities for a USD banking platform supporting 500,000+ users. The work connected customer onboarding with the checks and review paths needed by operations teams."
+      }
+    ],
+    "links": [
+      {
+        "label": "Cleva",
+        "href": "https://getcleva.com"
+      }
+    ],
+    "media": []
+  },
+  {
+    "id": "flexid-engineering",
+    "category": "Platform",
+    "title": "FlexID: digital identity across channels",
+    "summary": "CTO and later Co-Founder, building a digital identity wallet across Android, web, and WhatsApp.",
+    "period": "2021 to 2023",
+    "stage": "Professional delivery",
+    "brief": "Built a self-sovereign identity wallet and the systems connecting credential holders, issuers, and verifiers.",
+    "sections": [
+      {
+        "title": "Problem",
+        "body": "People needed to carry and present identity credentials across services and channels, with control over how their information was shared."
+      },
+      {
+        "title": "My contribution",
+        "body": "Served as CTO and later Co-Founder. Built the wallet across Android, web, and WhatsApp, using Algorand, verifiable credentials, zero-knowledge proofs, and MPC key management."
+      },
+      {
+        "title": "Technical thinking",
+        "body": "My accompanying technical essay explores how verifiable credentials, risk, and economic accountability interact. It presents the protocol model separately from this summary of platform engineering."
+      }
+    ],
+    "links": [
+      {
+        "label": "FlexID technical essay",
+        "href": "https://www.kudzaishe.com/flexid"
+      },
+      {
+        "label": "Company coverage",
+        "href": "https://techcrunch.com/2022/05/26/zimbabwe-flexid-algorand-funding-decentralized-identity/"
+      }
+    ],
+    "media": []
+  },
+  {
+    "id": "poza",
+    "category": "Applied AI",
+    "title": "Poza: applications & agent authorization",
+    "summary": "Building financial applications and an authorization layer for actions proposed by AI agents, with explicit user approval.",
+    "period": "2025 to Present",
+    "stage": "Product and pilot development",
+    "brief": "Poza brings together financial applications, identity, provider integrations, and controls around actions proposed by AI agents.",
+    "sections": [
+      {
+        "title": "Problem",
+        "body": "An agent can propose an action, but the application still needs to establish what the user approved and which service has authority to execute it."
+      },
+      {
+        "title": "My contribution",
+        "body": "Building the product across backend services, web and mobile clients, and payment-provider integrations. The agent workflow separates model-proposed actions from authorization and execution by application services."
+      },
+      {
+        "title": "Current stage",
+        "body": "Current work focuses on product and pilot development, with agent tooling and provider integrations introduced in stages."
+      }
+    ],
+    "links": [
+      {
+        "label": "Poza",
+        "href": "https://poza.co/"
+      },
+      {
+        "label": "Read the authorization essay",
+        "href": "https://poza.co/insights/agentic-payments-proving-permission/"
+      }
+    ],
+    "media": []
+  }
+]
+
+const stages = { 'mutapa-technologies': 'Professional delivery', lalela: 'Public application', 'bantu-grammar': 'Research prototype', ap2: 'Protocol contribution', gosper: 'Research prototype', 'mutapa-wear': 'Commerce project' }
+const workById = new Map([...existingProjects.map(project => ({ ...project, stage: stages[project.id] })), ...engineeringProjects].map(project => [project.id, project]))
+export const projects = ['cleva', 'mutapa-technologies', 'flexid-engineering', 'poza', 'lalela', 'ap2', 'bantu-grammar', 'gosper', 'mutapa-wear'].map(id => workById.get(id))

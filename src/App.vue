@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <div class="app-shell">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <router-view />
     <SiteFooter />
   </div>
@@ -17,3 +18,4 @@ export default {
 <style>
 /* Global app styles can go here if needed */
 </style>
+

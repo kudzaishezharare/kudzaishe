@@ -1,27 +1,22 @@
 <template>
   <div class="page-container">
     <!-- NAVIGATION -->
-    <nav class="vertical-nav">
-      <router-link to="/" class="nav-item">Home</router-link>
-      <router-link to="/experience" class="nav-item">Experience</router-link>
-      <router-link to="/about" class="nav-item">About</router-link>
-      <router-link to="/projects" class="nav-item active">Projects</router-link>
-      <router-link to="/blogs" class="nav-item">Blogs</router-link>
-    </nav>
+    <SiteNav />
 
     <!-- MAIN CONTENT -->
-    <main class="content">
+    <main class="content" id="main-content" tabindex="-1">
       <h1>Selected Work</h1>
-      <p class="project-intro">Open a project for the story, implementation notes, links, and original media.</p>
+      <p class="project-intro">Engineering work across identity, payments, AI, and applications. Each case study describes my contribution, the system, and its delivery stage.</p>
 
       <div v-for="project in projects" :key="project.id" class="item">
         <div class="meta">{{ project.category }}</div>
         <div class="details">
-          <button class="project-title" type="button" @click="openProject(project.id)">
+          <router-link class="project-title" :to="{ path: '/projects', query: { project: project.id } }">
             {{ project.title }}
             <span aria-hidden="true">↗</span>
-          </button>
+          </router-link>
           <div class="desc">{{ project.summary }}</div>
+          <span v-if="project.stage" class="project-stage">{{ project.stage }}</span>
         </div>
       </div>
     </main>
@@ -31,12 +26,13 @@
 </template>
 
 <script>
+import SiteNav from '../components/SiteNav.vue'
 import ProjectModal from '../components/ProjectModal.vue'
 import { projects } from '../data/projects'
 
 export default {
   name: 'Projects',
-  components: { ProjectModal },
+  components: { ProjectModal, SiteNav },
   data() {
     return { projects }
   },
@@ -59,47 +55,10 @@ export default {
 </script>
 
 <style scoped>
-.page-container {
-  display: flex;
-  min-height: 100vh;
-}
+.project-stage { display: inline-block; margin-top: 10px; color: var(--accent); font-size: 0.875rem; }
 
-.vertical-nav {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 200px;
-  background: var(--bg-color);
-  border-right: 1px solid var(--border);
-  padding: 80px 24px 24px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
 
-.nav-item {
-  color: var(--text-secondary);
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-  font-size: 14px;
-  font-weight: 500;
-}
 
-.nav-item:hover,
-.nav-item.active {
-  color: var(--accent);
-  background: rgba(164, 120, 90, 0.1);
-}
-
-.content {
-  margin-left: 200px;
-  max-width: 680px;
-  margin: 80px auto;
-  padding: 24px;
-}
 
 .content h1 {
   font-size: 22px;
@@ -135,7 +94,7 @@ h2 {
 .meta {
   flex: 0 0 130px;
   color: var(--text-secondary);
-  font-size: 13px;
+  font-size: 0.875rem;
   font-variant-numeric: tabular-nums;
 }
 
@@ -156,6 +115,7 @@ h2 {
   font: inherit;
   font-weight: 700;
   text-align: left;
+  text-decoration: none;
   transition: color 0.2s ease;
   cursor: pointer;
 }
@@ -168,12 +128,14 @@ h2 {
 .project-title:hover,
 .project-title:focus-visible {
   color: var(--accent);
-  outline: none;
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
 }
 
 .desc {
   color: var(--text-secondary);
-  font-size: 13.5px;
+  font-size: 1rem;
   line-height: 1.5;
 }
 </style>
+
