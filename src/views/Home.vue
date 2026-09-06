@@ -45,6 +45,13 @@
           CTO and later Co-Founder of FlexID. I studied computer science and
           mathematics at MIT.
         </p>
+        <div class="home-actions" aria-label="Work and résumé links">
+          <a
+            class="work-cta"
+            href="mailto:kudzi@alum.mit.edu?subject=Work%20with%20Kudzaishe"
+          >Work with me</a>
+          <a class="resume-link" href="/kudzaishe-zharare-cv.pdf">Résumé / CV</a>
+        </div>
       </div>
     </main>
   </div>
@@ -152,5 +159,54 @@ export default {
 
 .welcome-text a {
   color: var(--accent);
+}
+
+.home-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.home-actions a {
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.work-cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 8px 15px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  background: var(--accent);
+  color: var(--bg-color) !important;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.work-cta:hover,
+.work-cta:focus-visible {
+  background: transparent;
+  color: var(--text-primary) !important;
+}
+
+.resume-link {
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--accent);
+}
+
+.home-actions a:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 3px;
+}
+
+@media (max-width: 420px) {
+  .home-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
 }
 </style>
