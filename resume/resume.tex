@@ -1,32 +1,67 @@
-%!TEX TS-program = xelatex
-%!TEX encoding = UTF-8 Unicode
-\documentclass[10pt, a4paper]{awesome-cv}
-
-\geometry{left=1.35cm, top=.72cm, right=1.35cm, bottom=1.55cm, footskip=.45cm}
-\fontdir[fonts/]
-\colorlet{awesome}{awesome-red}
-\setbool{acvSectionColorHighlight}{true}
-\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-
-\name{Kudzaishe}{Zharare}
-\position{Software Engineer{\enskip\cdotp\enskip}AI Systems{\enskip\cdotp\enskip}Fintech Infrastructure}
-\address{Cape Town, South Africa}
-\mobile{(+27) 612 673 163}
-\email{kudzi@alum.mit.edu}
-\homepage{www.kudzaishe.com}
-\github{kudzaishezharare}
+% Build from this directory: xelatex -halt-on-error resume.tex
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.55in]{geometry}
+\usepackage{fontspec}
+\setmainfont{NimbusSans-Regular.otf}[BoldFont=NimbusSans-Bold.otf]
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{ragged2e}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.07}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{2pt}\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+\setlist[itemize]{leftmargin=12pt,labelsep=5pt,itemsep=3pt,topsep=4pt,parsep=0pt,partopsep=0pt}
+\newcommand{\role}[3]{\textbf{#1}\hfill #3\par #2\par}
+\hypersetup{pdftitle={Kudzaishe Zharare - Resume},pdfauthor={Kudzaishe Zharare}}
 
 \begin{document}
-\makecvheader[C]
-\makecvfooter
-  {September 2026}
-  {Kudzaishe Zharare~~~·~~~Résumé}
-  {\thepage}
+\RaggedRight
+{\fontsize{22}{25}\selectfont\textbf{Kudzaishe Zharare}}\par
+\vspace{4pt}
+Cape Town, South Africa \enspace | \enspace \href{mailto:kudzi@alum.mit.edu}{kudzi@alum.mit.edu} \enspace | \enspace +27 61 267 3163\par
+\href{https://www.kudzaishe.com}{kudzaishe.com} \enspace | \enspace \href{https://github.com/kudzaishezharare}{github.com/kudzaishezharare}
 
-\input{resume/summary.tex}
-\input{resume/experience.tex}
-\clearpage
-\input{resume/skills.tex}
-\input{resume/projects.tex}
-\input{resume/education.tex}
+\section{Experience}
+\role{Poza}{Founder and Lead Engineer}{2025 - Present}
+\begin{itemize}
+  \item Building a money app and AI-agent authorization layer using TypeScript and AWS; designed explicit user approvals, single-use execution grants, revocation, and auditable receipts.
+  \item Built Smithy API contracts and generated TypeScript and Dart clients, with shared fixtures checking approval replay, payment serialization, and state transitions.
+\end{itemize}
+
+\role{Cleva Technologies (YC W24)}{Lead Software Engineer}{Apr 2024 - 2025}
+\begin{itemize}
+  \item Led KYC automation with Veriff and an in-house verification flow, replacing waits of 2 days to 3 weeks with decisions in under a minute for eligible completed submissions; built infrastructure used as Cleva scaled beyond 1 million users.
+  \item Built Nigerian NIN verification using OCR and AWS Rekognition face comparison, plus face indexing and search to detect duplicate accounts; routed uncertain cases to reviewers with explicit reasons.
+  \item Designed a configurable JSON Logic engine for approximately 100 evolving KYC rules, enabling policy updates and feature flags with deterministic approval, denial, and manual-review outcomes.
+\end{itemize}
+
+\role{FlexID Technologies}{CTO, later Co-Founder}{2021 - 2023}
+\begin{itemize}
+  \item Led a distributed engineering team building identity wallets across Android, web, and WhatsApp, with Algorand and verifiable credentials; owned architecture, cloud infrastructure, APIs, and SDKs.
+\end{itemize}
+
+\role{Motapa, trading as Mutapa}{Founder and Systems Architect}{2019 - 2021}
+\begin{itemize}
+  \item Led a five-person delivery team for CBZ's contracted 200-merchant programme, implementing iVeri payment integrations for universities, retailers, healthcare providers, and public institutions; coordinated merchant training and bank liaison.
+  \item Extended support through 2022 across card and EcoCash payments; added 3D Secure, Cybersource Decision Manager, and Zimswitch gateway integrations in subsequent work. Built Mutapa Marketplace, later acquired by CBZ Holdings.
+\end{itemize}
+
+\role{The World Bank}{Country Lead Engineer, DRIVER Project}{2019 - 2020}
+\begin{itemize}
+  \item Built Zimbabwe's crash-reporting application and national dashboards; led rollout with police, ambulance services, and the Ministry of Health.
+\end{itemize}
+
+\section{Skills}
+\textbf{Languages and frameworks:} TypeScript, JavaScript, Python, Node.js, React, React Native, Django\par
+\textbf{Cloud and data:} AWS, CDK, Lambda, PostgreSQL, DynamoDB, Redis, Docker\par
+\textbf{Systems:} LLM tool calling, Smithy, REST APIs, webhooks, idempotency, authorization, KYC, OCR
+
+\section{Education}
+\textbf{Massachusetts Institute of Technology}\hfill 2019\par
+B.S. in Computer Science and Mathematics
 \end{document}

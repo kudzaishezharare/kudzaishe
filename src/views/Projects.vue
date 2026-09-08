@@ -1,24 +1,40 @@
 <template>
   <div class="page-container">
     <!-- NAVIGATION -->
-    <SiteNav />
+    <nav class="vertical-nav">
+      <router-link to="/" class="nav-item">Home</router-link>
+      <router-link to="/experience" class="nav-item">Experience</router-link>
+      <router-link to="/about" class="nav-item">About</router-link>
+      <router-link to="/projects" class="nav-item active">Projects</router-link>
+      <router-link to="/blogs" class="nav-item">Blogs</router-link>
+    </nav>
 
     <!-- MAIN CONTENT -->
-    <main class="content" id="main-content" tabindex="-1">
+    <main class="content">
       <h1>Selected Work</h1>
-      <p class="project-intro">Engineering work across identity, payments, AI, and applications. Each case study describes my contribution, the system, and its delivery stage.</p>
+      <p class="project-intro">Open a project for the story, implementation notes, links, and original media.</p>
 
       <div v-for="project in projects" :key="project.id" class="item">
         <div class="meta">{{ project.category }}</div>
         <div class="details">
-          <router-link class="project-title" :to="{ path: '/projects', query: { project: project.id } }">
+          <button class="project-title" type="button" @click="openProject(project.id)">
             {{ project.title }}
             <span aria-hidden="true">↗</span>
-          </router-link>
+          </button>
           <div class="desc">{{ project.summary }}</div>
-          <span v-if="project.stage" class="project-stage">{{ project.stage }}</span>
         </div>
       </div>
+      <section id="cbz-organisations" aria-labelledby="organisations-title" class="organisations-section">
+        <h2 id="organisations-title">Organisations served through CBZ</h2>
+        <p class="organisation-intro">Selected organisations from the payment integrations delivered by my team through Motapa's CBZ Bank programme, spanning education, commerce, healthcare, agriculture, and public services.</p>
+        <ul class="organisation-grid">
+          <li v-for="organisation in organisations" :key="organisation.name" class="organisation-tile">
+            <img v-if="organisation.logoSrc" :src="organisation.logoSrc" alt="" class="organisation-logo" loading="lazy" width="144" height="56">
+            <span class="organisation-name">{{ organisation.name }}</span>
+            <span class="organisation-sector">{{ organisation.sector }}</span>
+          </li>
+        </ul>
+      </section>
     </main>
 
     <ProjectModal :project="selectedProject" @close="closeProject" />
@@ -26,15 +42,15 @@
 </template>
 
 <script>
-import SiteNav from '../components/SiteNav.vue'
 import ProjectModal from '../components/ProjectModal.vue'
 import { projects } from '../data/projects'
+import { organisations } from '../data/organisations'
 
 export default {
   name: 'Projects',
-  components: { ProjectModal, SiteNav },
+  components: { ProjectModal },
   data() {
-    return { projects }
+    return { projects, organisations }
   },
   computed: {
     selectedProject() {
@@ -55,10 +71,47 @@ export default {
 </script>
 
 <style scoped>
-.project-stage { display: inline-block; margin-top: 10px; color: var(--accent); font-size: 0.875rem; }
+.page-container {
+  display: flex;
+  min-height: 100vh;
+}
 
+.vertical-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 200px;
+  background: var(--bg-color);
+  border-right: 1px solid var(--border);
+  padding: 80px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
+.nav-item {
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
 
+.nav-item:hover,
+.nav-item.active {
+  color: var(--accent);
+  background: rgba(164, 120, 90, 0.1);
+}
+
+.content {
+  margin-left: 200px;
+  max-width: 680px;
+  margin: 80px auto;
+  padding: 24px;
+}
 
 .content h1 {
   font-size: 22px;
@@ -94,7 +147,7 @@ h2 {
 .meta {
   flex: 0 0 130px;
   color: var(--text-secondary);
-  font-size: 0.875rem;
+  font-size: 13px;
   font-variant-numeric: tabular-nums;
 }
 
@@ -115,7 +168,6 @@ h2 {
   font: inherit;
   font-weight: 700;
   text-align: left;
-  text-decoration: none;
   transition: color 0.2s ease;
   cursor: pointer;
 }
@@ -128,14 +180,22 @@ h2 {
 .project-title:hover,
 .project-title:focus-visible {
   color: var(--accent);
-  outline: 2px solid var(--accent);
-  outline-offset: 5px;
+  outline: none;
 }
 
 .desc {
   color: var(--text-secondary);
-  font-size: 1rem;
+  font-size: 13.5px;
   line-height: 1.5;
 }
-</style>
 
+.organisations-section { margin-top: 56px; scroll-margin-top: 90px; }
+.organisation-intro { color: var(--text-secondary); font-size: 13.5px; line-height: 1.7; }
+.organisation-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; list-style: none; padding: 0; margin: 24px 0 0; }
+.organisation-tile { min-width: 0; min-height: 110px; padding: 16px; border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: center; gap: 8px; }
+.organisation-name { color: var(--text-primary); font-size: 13px; font-weight: 700; overflow-wrap: anywhere; }
+.organisation-sector { color: var(--text-secondary); font-size: 11px; }
+.organisation-logo { width: 100%; height: 56px; object-fit: contain; margin-bottom: 8px; }
+@media (max-width: 760px) { .organisation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 360px) { .organisation-grid { grid-template-columns: 1fr; } }
+</style>

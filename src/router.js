@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from './views/Home.vue'
 import Experience from './views/Experience.vue'
-import Work from './views/Work.vue'
 import About from './views/About.vue'
 import Projects from './views/Projects.vue'
 import Blogs from './views/Blogs.vue'
@@ -10,7 +9,6 @@ import FlexID from './views/FlexID.vue'
 import { defaultImage, seoByPath, siteUrl } from './data/seo'
 
 const routes = [
-  { path: '/work', name: 'Work', component: Work, meta: seoByPath['/work'] },
   {
     path: '/',
     name: 'Home',
@@ -60,8 +58,8 @@ const router = createRouter({
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) return savedPosition
-    if (to.path === from.path) return false
-    return { top: 0 }
+    if (to.hash) return { el: to.hash, top: 80 }
+    if (to.path !== from.path) return { top: 0 }
   }
 })
 
@@ -77,8 +75,8 @@ const setMeta = (selector, attribute, value) => {
 }
 
 router.afterEach(to => {
-  const title = to.meta.title || seoByPath['/'].title
-  const description = to.meta.description || seoByPath['/'].description
+  const title = to.meta.title || 'Kudzaishe Zharare · Founder and Engineer'
+  const description = to.meta.description || 'Zimbabwean founder and engineer building financial and trust infrastructure from Cape Town.'
   const canonicalUrl = `${siteUrl}${to.path === '/' ? '/' : to.path}`
 
   document.title = title
@@ -101,4 +99,3 @@ router.afterEach(to => {
 })
 
 export default router
-

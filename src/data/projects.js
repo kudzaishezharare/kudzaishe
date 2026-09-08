@@ -17,7 +17,37 @@ const creativeIndustriesDeck = {
   meta: 'Historical strategy deck · 5 pages'
 }
 
-const existingProjects = [
+export const projects = [
+  {
+    id: 'cleva',
+    category: 'Identity',
+    title: 'Cleva: automated identity verification',
+    summary: 'KYC automation that replaced days of waiting with decisions in under a minute for eligible submissions, supporting onboarding as Cleva grew beyond a million users.',
+    period: 'Apr 2024 - 2025',
+    brief: 'I joined Cleva in April 2024 when it had around 2,000 users and KYC was largely manual. After an August surge created a weeks-long backlog, I led the engineering work to automate verification and give reviewers better tools for exceptions.',
+    sections: [
+      { title: 'From days to under a minute', body: 'Users previously submitted personal details, an ID document, and a selfie holding that document, then waited for manual review. Waits ranged from 2 days to 3 weeks depending on demand. I integrated Veriff and built an in-house verification flow so eligible completed submissions could receive a decision in under a minute. Cases that could not be confidently approved or denied continued to manual review.' },
+      { title: 'Nigerian NIN and duplicate detection', body: 'For Nigerian NIN documents unsupported by our Veriff integration, I built a flow using OCR to extract document information and AWS Rekognition to compare faces. Face indexing and search helped detect duplicate accounts. Reviewers received explicit reasons when automation could not resolve a case, including uncertain extraction or face matching.' },
+      { title: 'Changing policy, predictable decisions', body: 'I designed a configurable JSON Logic engine for approximately 100 evolving KYC rules, with feature flags and explicit approval, denial, and manual-review outcomes. This made compliance policy easier to update and inspect as requirements changed.' },
+      { title: 'Infrastructure for growth', body: 'The auto-verifier launched when Cleva had around 10,000 users. The verification infrastructure I designed remained part of onboarding as the company grew beyond a million users, removing a manual bottleneck in the path to serving that larger user base.' }
+    ],
+    links: [{ label: 'Cleva', href: 'https://getcleva.com' }],
+    media: []
+  },
+  {
+    id: 'poza',
+    category: 'Payments',
+    title: 'Poza: money and agent authorization',
+    summary: 'Building a money app and an authorization layer that connects actions proposed by AI agents to explicit user approval and controlled execution.',
+    period: '2025 - Present',
+    brief: 'Poza combines a consumer money app for African users with infrastructure for authorizing actions proposed by AI agents. My focus is making permission explicit, enforceable, and traceable across the product.',
+    sections: [
+      { title: 'Permission before execution', body: 'I designed typed contracts for intent evidence, exact user approval, single-use execution grants, revocation, idempotency, and execution receipts. Models interpret requests and prepare proposed actions; domain services enforce policy and execute provider calls.' },
+      { title: 'Shared contracts across clients', body: 'I built Smithy API contracts and generated TypeScript and Dart clients, with shared fixtures covering action unions, modeled errors, approval replay, money serialization, and state transitions. The application and its AWS infrastructure are under active development.' }
+    ],
+    links: [{ label: 'Why agent payments need proof of permission', href: 'https://poza.co/insights/agentic-payments-proving-permission/' }],
+    media: []
+  },
   {
     id: 'mutapa-wear',
     category: 'Commerce',
@@ -51,8 +81,8 @@ const existingProjects = [
     id: 'mutapa-technologies',
     category: 'Fintech',
     title: 'Mutapa Technologies',
-    summary: 'The COVID pivot from merchant storefronts into payment infrastructure, enterprise deployment, and Mutapa Marketplace, later acquired by CBZ Holdings and rebranded as Zikimall.',
-    period: '2020 — 2021',
+    summary: 'Led a five-person team delivering merchant payment integrations through CBZ, spanning universities, retail, healthcare, and public institutions. Built Mutapa Marketplace, later acquired by CBZ Holdings.',
+    period: '2020 - 2022, with subsequent support',
     brief: 'When COVID stopped Mutapa Wear from shipping internationally, I built Mutapa Stores so local businesses could launch a storefront with payments and delivery. That workflow became the entry point into merchant payment infrastructure.',
     sections: [
       {
@@ -60,8 +90,16 @@ const existingProjects = [
         body: 'Mutapa Stores bundled a digital storefront, payments, inventory, and delivery so artisans and local businesses could keep selling during lockdown. The stores later became a shared marketplace rather than isolated merchant sites.'
       },
       {
-        title: 'Two hundred institutions',
-        body: 'A Visa-backed program brought us into 200 major Zimbabwean merchants and institutions through CBZ. I worked with executives, IT teams, government officials, and business owners to map collection workflows, implement integrations, train staff, and take systems live.'
+        title: 'Engineering leadership and delivery',
+        body: 'CBZ appointed Motapa to a programme contracted to cover 200 merchants. As lead engineer, I headed four other team members delivering iVeri integrations, working with merchant IT teams and business owners to map collection workflows, implement and test payments, and coordinate sign-off. I represented our team with CBZ and coordinated merchant training and ongoing support.'
+      },
+      {
+        title: 'Across sectors',
+        body: 'Our delivery records include the University of Zimbabwe, Lupane State University, Kwekwe Polytechnic, Eaglesvale, OK Zimbabwe, Gain Cash & Carry, Schweppes Harare, CIMAS, Avenues Clinic, Seed Co, ZIMRA, and York Lodge. Each organisation brought different payment and operational requirements, from tuition and healthcare to retail checkout and public-service collections.'
+      },
+      {
+        title: 'Beyond initial integration',
+        body: 'Support continued through 2022, including card and EcoCash payment flows. Subsequent work extended integrations with 3D Secure, Cybersource Decision Manager, and Zimswitch online card payments through EFT Corporation\'s Open Payment Platform. These additions expanded payment coverage and fraud-screening capabilities after the initial rollout.'
       },
       {
         title: 'What the deployments taught me',
@@ -125,22 +163,6 @@ const existingProjects = [
     media: []
   },
   {
-    id: 'ap2',
-    category: 'Protocol',
-    title: 'Agent Payments Protocol (AP2)',
-    summary: "Contributor to Google's open protocol for secure AI-agent payments, including work to represent African payment methods and mobile-money flows.",
-    period: 'Open protocol',
-    brief: 'AP2 defines interoperable primitives for accountable payments initiated by AI agents. My interest is ensuring emerging standards can represent payment methods and operating realities beyond cards and developed-market checkout.',
-    sections: [
-      { title: 'Connection to Poza', body: 'Protocols can carry intent and authority, but they do not replace local identity, compliance, payment availability, revocation, routing, or recovery. Poza treats AP2 as an adapter around those product responsibilities.' }
-    ],
-    links: [
-      { label: 'AP2 repository', href: 'https://github.com/google-agentic-commerce/AP2' },
-      { label: 'AP2 website', href: 'https://ap2-protocol.org' }
-    ],
-    media: []
-  },
-  {
     id: 'gosper',
     category: 'Geospatial',
     title: 'Gosper Open Location Code',
@@ -155,109 +177,3 @@ const existingProjects = [
     media: []
   }
 ]
-
-
-const engineeringProjects = [
-  {
-    "id": "cleva",
-    "category": "Identity",
-    "title": "Cleva: identity & compliance systems",
-    "summary": "Led identity and compliance engineering, including automated KYC, liveness verification, transaction monitoring, and onboarding.",
-    "period": "2023 to 2025",
-    "stage": "Professional delivery",
-    "brief": "As Lead Engineer at Cleva (YC W24), I worked on the security, identity, and compliance systems behind a USD banking platform.",
-    "sections": [
-      {
-        "title": "Problem",
-        "body": "Onboarding needed to verify customers, apply compliance rules, and handle retries and review paths across web and mobile."
-      },
-      {
-        "title": "My contribution",
-        "body": "Led security, identity, and compliance engineering. Built automated KYC, liveness, transaction-monitoring, resilient onboarding, and internal mobile-testing systems."
-      },
-      {
-        "title": "Delivery context",
-        "body": "Built verification and monitoring capabilities for a USD banking platform supporting 500,000+ users. The work connected customer onboarding with the checks and review paths needed by operations teams."
-      }
-    ],
-    "links": [
-      {
-        "label": "Cleva",
-        "href": "https://getcleva.com"
-      }
-    ],
-    "media": []
-  },
-  {
-    "id": "flexid-engineering",
-    "category": "Platform",
-    "title": "FlexID: digital identity across channels",
-    "summary": "CTO and later Co-Founder, building a digital identity wallet across Android, web, and WhatsApp.",
-    "period": "2021 to 2023",
-    "stage": "Professional delivery",
-    "brief": "Built a self-sovereign identity wallet and the systems connecting credential holders, issuers, and verifiers.",
-    "sections": [
-      {
-        "title": "Problem",
-        "body": "People needed to carry and present identity credentials across services and channels, with control over how their information was shared."
-      },
-      {
-        "title": "My contribution",
-        "body": "Served as CTO and later Co-Founder. Built the wallet across Android, web, and WhatsApp, using Algorand, verifiable credentials, zero-knowledge proofs, and MPC key management."
-      },
-      {
-        "title": "Technical thinking",
-        "body": "My accompanying technical essay explores how verifiable credentials, risk, and economic accountability interact. It presents the protocol model separately from this summary of platform engineering."
-      }
-    ],
-    "links": [
-      {
-        "label": "FlexID technical essay",
-        "href": "https://www.kudzaishe.com/flexid"
-      },
-      {
-        "label": "Company coverage",
-        "href": "https://techcrunch.com/2022/05/26/zimbabwe-flexid-algorand-funding-decentralized-identity/"
-      }
-    ],
-    "media": []
-  },
-  {
-    "id": "poza",
-    "category": "Applied AI",
-    "title": "Poza: applications & agent authorization",
-    "summary": "Building financial applications and an authorization layer for actions proposed by AI agents, with explicit user approval.",
-    "period": "2025 to Present",
-    "stage": "Product and pilot development",
-    "brief": "Poza brings together financial applications, identity, provider integrations, and controls around actions proposed by AI agents.",
-    "sections": [
-      {
-        "title": "Problem",
-        "body": "An agent can propose an action, but the application still needs to establish what the user approved and which service has authority to execute it."
-      },
-      {
-        "title": "My contribution",
-        "body": "Building the product across backend services, web and mobile clients, and payment-provider integrations. The agent workflow separates model-proposed actions from authorization and execution by application services."
-      },
-      {
-        "title": "Current stage",
-        "body": "Current work focuses on product and pilot development, with agent tooling and provider integrations introduced in stages."
-      }
-    ],
-    "links": [
-      {
-        "label": "Poza",
-        "href": "https://poza.co/"
-      },
-      {
-        "label": "Read the authorization essay",
-        "href": "https://poza.co/insights/agentic-payments-proving-permission/"
-      }
-    ],
-    "media": []
-  }
-]
-
-const stages = { 'mutapa-technologies': 'Professional delivery', lalela: 'Public application', 'bantu-grammar': 'Research prototype', ap2: 'Protocol contribution', gosper: 'Research prototype', 'mutapa-wear': 'Commerce project' }
-const workById = new Map([...existingProjects.map(project => ({ ...project, stage: stages[project.id] })), ...engineeringProjects].map(project => [project.id, project]))
-export const projects = ['cleva', 'mutapa-technologies', 'flexid-engineering', 'poza', 'lalela', 'ap2', 'bantu-grammar', 'gosper', 'mutapa-wear'].map(id => workById.get(id))
