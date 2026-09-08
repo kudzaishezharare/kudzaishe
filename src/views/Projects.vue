@@ -26,10 +26,12 @@
       </div>
       <section id="cbz-organisations" aria-labelledby="organisations-title" class="organisations-section">
         <h2 id="organisations-title">Organisations served through CBZ</h2>
-        <p class="organisation-intro">Selected organisations from the payment integrations delivered by my team through Motapa's CBZ Bank programme, spanning education, commerce, healthcare, agriculture, and public services.</p>
+        <p class="organisation-intro">Selected organisations from the payment integrations delivered by my team through Motapa's CBZ Bank programme, spanning education, commerce, healthcare, agriculture, and hospitality.</p>
         <ul class="organisation-grid">
-          <li v-for="organisation in organisations" :key="organisation.name" class="organisation-tile">
-            <img v-if="organisation.logoSrc" :src="organisation.logoSrc" alt="" class="organisation-logo" loading="lazy" width="144" height="56">
+          <li v-for="organisation in visibleOrganisations" :key="organisation.name" class="organisation-tile">
+            <div class="organisation-logo-panel" :class="{ 'organisation-logo-panel-dark': organisation.logoTheme === 'dark' }">
+              <img :src="organisation.logoSrc" alt="" class="organisation-logo" loading="lazy" width="160" height="72" @error="hideOrganisation(organisation.name)">
+            </div>
             <span class="organisation-name">{{ organisation.name }}</span>
             <span class="organisation-sector">{{ organisation.sector }}</span>
           </li>
@@ -50,14 +52,22 @@ export default {
   name: 'Projects',
   components: { ProjectModal },
   data() {
-    return { projects, organisations }
+    return { projects, organisations, unavailableLogos: [] }
   },
   computed: {
+    visibleOrganisations() {
+      return this.organisations.filter(organisation =>
+        organisation.logoSrc && !this.unavailableLogos.includes(organisation.name)
+      )
+    },
     selectedProject() {
       return this.projects.find(project => project.id === this.$route.query.project) || null
     }
   },
   methods: {
+    hideOrganisation(name) {
+      this.unavailableLogos.push(name)
+    },
     openProject(projectId) {
       this.$router.push({ query: { ...this.$route.query, project: projectId } })
     },
@@ -195,7 +205,9 @@ h2 {
 .organisation-tile { min-width: 0; min-height: 110px; padding: 16px; border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: center; gap: 8px; }
 .organisation-name { color: var(--text-primary); font-size: 13px; font-weight: 700; overflow-wrap: anywhere; }
 .organisation-sector { color: var(--text-secondary); font-size: 11px; }
-.organisation-logo { width: 100%; height: 56px; object-fit: contain; margin-bottom: 8px; }
+.organisation-logo-panel { display: flex; align-items: center; justify-content: center; min-height: 96px; padding: 12px; margin-bottom: 4px; background: #fff; border-radius: 2px; }
+.organisation-logo-panel-dark { background: var(--bg-color); }
+.organisation-logo { display: block; width: 100%; max-width: 160px; height: 72px; object-fit: contain; }
 @media (max-width: 760px) { .organisation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 360px) { .organisation-grid { grid-template-columns: 1fr; } }
 </style>

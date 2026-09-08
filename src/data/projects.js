@@ -95,7 +95,7 @@ export const projects = [
       },
       {
         title: 'Across sectors',
-        body: 'Our delivery records include the University of Zimbabwe, Lupane State University, Kwekwe Polytechnic, Eaglesvale, OK Zimbabwe, Gain Cash & Carry, Schweppes Harare, CIMAS, Avenues Clinic, Seed Co, ZIMRA, and York Lodge. Each organisation brought different payment and operational requirements, from tuition and healthcare to retail checkout and public-service collections.'
+        body: 'Our delivery records include the University of Zimbabwe, Lupane State University, Kwekwe Polytechnic, Eaglesvale, OK Zimbabwe, Gain Cash & Carry, CIMAS, Avenues Clinic, Seed Co, and York Lodge. Each organisation brought different payment and operational requirements, from tuition and healthcare to retail checkout and hospitality.'
       },
       {
         title: 'Beyond initial integration',

@@ -13,7 +13,9 @@ The public résumé is `public/kudzaishe-zharare-cv.pdf`; its editable LaTeX sou
 and build instructions are in `resume/`.
 
 Project descriptions live in `src/data/projects.js`. The organisations served
-through CBZ are in `src/data/organisations.js`. To add a logo later, place the
-approved image in `public/organisations/` and set that entry's `logoSrc` to the
-root-relative image path. The organisation name remains visible for readability
-and accessibility. With no logo, the tile shows the name and sector.
+through CBZ are in `src/data/organisations.js`. Original logo assets are served
+from `public/organisations/`; their sources are recorded in `SOURCES.md` there.
+Set an entry's `logoSrc` to its root-relative image path. The organisation name
+remains visible for readability and accessibility. Only entries with logos are
+shown, and a tile is hidden if its image fails to load. Light panels keep the
+original brand colours legible against the site's dark background.
