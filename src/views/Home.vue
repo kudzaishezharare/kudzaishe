@@ -26,17 +26,25 @@
         <div class="header-text">
           <h1>Kudzaishe George Zharare</h1>
           <div class="bio">
-            Founder and engineer · Cape Town<br>
+            Founder and engineer
           </div>
         </div>
       </header>
 
       <div class="welcome-text">
         <p>
-          I build financial and trust infrastructure for markets that global
-          technology treats as edge cases. I am currently building Poza, a money
-          app and authorization layer for African users and AI agents. I explore
-          that problem in <a href="https://poza.co/insights/agentic-payments-proving-permission/" target="_blank" rel="noopener noreferrer">AI agents can spend money. The hard part is proving they had permission.</a>
+          I build financial software from product research and interface design
+          through backend services and deployment. At Poza, I turned 56 merchant
+          and payments-stakeholder interviews into product requirements, user
+          journeys, and technical architecture, then built mobile and web
+          experiences with TypeScript services on AWS.
+        </p>
+        <p>
+          The work includes document verification, payment and card integrations
+          with Airwallex, a PostgreSQL wallet ledger, and Alpaca brokerage
+          integration in sandbox. Poza remains under active development. I am
+          also designing how users can approve and limit financial actions by
+          AI agents, explored in <a href="https://poza.co/insights/agentic-payments-proving-permission/" target="_blank" rel="noopener noreferrer">AI agents can spend money. The hard part is proving they had permission.</a>
         </p>
         <p>
           At Cleva (YC W24), I led KYC automation that replaced days of waiting

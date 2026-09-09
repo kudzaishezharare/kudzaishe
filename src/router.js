@@ -76,7 +76,7 @@ const setMeta = (selector, attribute, value) => {
 
 router.afterEach(to => {
   const title = to.meta.title || 'Kudzaishe Zharare · Founder and Engineer'
-  const description = to.meta.description || 'Zimbabwean founder and engineer building financial and trust infrastructure from Cape Town.'
+  const description = to.meta.description || 'Founder and engineer building financial, identity, and trust infrastructure.'
   const canonicalUrl = `${siteUrl}${to.path === '/' ? '/' : to.path}`
 
   document.title = title

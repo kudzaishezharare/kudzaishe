@@ -1,7 +1,8 @@
 # Résumé
 
 `resume.tex` is the source of the public, one-page résumé. It uses XeLaTeX,
-Nimbus Sans, black text, an 11-point body, a single column, and A4 paper.
+Bitstream Charter, black text, an 11-point body, a single column, and A4 paper.
+The name and contact links are centered; personal location and nationality are omitted.
 
 Build and publish the matching PDF from the repository root:
 
@@ -28,5 +29,9 @@ Content distinctions to preserve:
   support continuing through 2022 and subsequent integration work.
 - Poza is under active development. Do not describe planned features as a
   launched service or add unsupported usage metrics.
+- Poza's 56 interviews are discovery activity, not customer acquisition. Its
+  custom document-verification pipeline uses existing OCR engines and AWS
+  Rekognition, not custom-trained OCR or liveness models. Alpaca work is in
+  sandbox; merged wallet code does not establish a production launch.
 
 Private contracts and merchant sign-off documents are not part of this repository.

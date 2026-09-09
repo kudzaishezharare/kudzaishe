@@ -2,7 +2,7 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=0.55in]{geometry}
 \usepackage{fontspec}
-\setmainfont{NimbusSans-Regular.otf}[BoldFont=NimbusSans-Bold.otf]
+\setmainfont{Bitstream Charter}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage[hidelinks]{hyperref}
@@ -11,8 +11,6 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 \linespread{1.07}
-\hyphenpenalty=10000
-\exhyphenpenalty=10000
 \titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{2pt}\titlerule]
 \titlespacing*{\section}{0pt}{10pt}{6pt}
 \setlist[itemize]{leftmargin=12pt,labelsep=5pt,itemsep=3pt,topsep=4pt,parsep=0pt,partopsep=0pt}
@@ -24,15 +22,18 @@
 \begin{center}
 {\fontsize{22}{25}\selectfont\textbf{Kudzaishe Zharare}}\par
 \vspace{4pt}
-Cape Town, South Africa \enspace | \enspace \href{mailto:kudzi@alum.mit.edu}{kudzi@alum.mit.edu}\par
-\href{https://www.kudzaishe.com}{kudzaishe.com} \enspace | \enspace \href{https://github.com/kudzaishezharare}{github.com/kudzaishezharare}
+\href{mailto:kudzi@alum.mit.edu}{kudzi@alum.mit.edu} \enspace | \enspace
+\href{https://www.kudzaishe.com}{kudzaishe.com} \enspace | \enspace
+\href{https://github.com/kudzaishezharare}{github.com/kudzaishezharare}
 \end{center}
 
 \section{Experience}
-\role{Poza}{Founder and Lead Engineer}{2025 - Present}
+\role{Poza}{Founder and Software Engineer}{2025 - Present}
 \begin{itemize}
-  \item Building a money app and AI-agent authorization layer using TypeScript and AWS; designed explicit user approvals, single-use execution grants, revocation, and auditable receipts.
-  \item Built Smithy API contracts and generated TypeScript and Dart clients, with shared fixtures checking approval replay, payment serialization, and state transitions.
+  \item Led discovery through 56 merchant and payments-stakeholder interviews; translated findings into product requirements, user journeys, interface prototypes, and technical architecture.
+  \item Built Flutter/Dart mobile apps, web interfaces, and TypeScript services on AWS, connecting account creation, identity verification, and financial account workflows.
+  \item Built document verification using PaddleOCR, passport and barcode validation, and facial matching; integrated AWS Rekognition liveness checks into onboarding.
+  \item Implemented Airwallex payment and card integrations, a PostgreSQL wallet ledger with deposit matching and reconciliation, and Alpaca brokerage onboarding, funding, and orders in sandbox.
 \end{itemize}
 
 \role{Cleva Technologies (YC W24)}{Lead Software Engineer}{Apr 2024 - 2025}
@@ -59,7 +60,7 @@ Cape Town, South Africa \enspace | \enspace \href{mailto:kudzi@alum.mit.edu}{kud
 \end{itemize}
 
 \section{Skills}
-\textbf{Languages and frameworks:} TypeScript, JavaScript, Python, Node.js, React, React Native, Django\par
+\textbf{Languages and frameworks:} TypeScript, JavaScript, Python, Dart, Flutter, Node.js, React, Django\par
 \textbf{Cloud and data:} AWS, CDK, Lambda, PostgreSQL, DynamoDB, Redis, Docker\par
 \textbf{Systems:} LLM tool calling, Smithy, REST APIs, webhooks, idempotency, authorization, KYC, OCR
 

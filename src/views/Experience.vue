@@ -16,8 +16,8 @@
       <div class="item">
         <div class="meta">2025 — Present</div>
         <div class="details">
-          <span class="title">Founder @ Poza</span>
-          <div class="desc">Building financial access and enforceable payment authorization for African users and AI agents, starting with a consumer money app in South Africa.</div>
+          <span class="title">Founder and Software Engineer @ Poza</span>
+          <div class="desc">Led product discovery through 56 merchant and payments-stakeholder interviews, translating findings into requirements, user journeys, interface prototypes, and technical architecture. Built Flutter/Dart mobile apps, web interfaces, and TypeScript services on AWS. Implemented document verification with PaddleOCR and facial matching, Rekognition liveness checks, Airwallex payment and card integrations, a PostgreSQL wallet ledger with deposit matching and reconciliation, and Alpaca brokerage onboarding, funding, and orders in sandbox. Product development and deployment verification remain in progress.</div>
         </div>
       </div>
 

@@ -1,22 +1,22 @@
 export const siteUrl = 'https://www.kudzaishe.com'
-export const defaultImage = `${siteUrl}/social-card.jpg`
+export const defaultImage = `${siteUrl}/kudzigeorge-avatar.jpg`
 
 export const seoByPath = {
   '/': {
     title: 'Kudzaishe Zharare · Founder and Engineer',
-    description: 'Zimbabwean founder and engineer building financial and trust infrastructure from Cape Town.'
+    description: 'Founder and engineer building financial, identity, and trust infrastructure.'
   },
   '/about': {
     title: 'About · Kudzaishe Zharare',
-    description: 'About Kudzaishe George Zharare, a Zimbabwean founder, MIT graduate, and engineer based in Cape Town.'
+    description: 'About Kudzaishe George Zharare, an MIT graduate, founder, and engineer working across fintech, identity, and public infrastructure.'
   },
   '/experience': {
     title: 'Experience · Kudzaishe Zharare',
-    description: 'Founder and engineering experience across Poza, Cleva, FlexID, Mutapa, and the World Bank in African fintech, identity, and public infrastructure.'
+    description: 'Founder and engineering experience across Poza, Cleva, FlexID, Mutapa, and the World Bank in fintech, identity, and public infrastructure.'
   },
   '/projects': {
     title: 'Selected Work · Kudzaishe Zharare',
-    description: 'Cleva KYC automation, Poza agent authorization, CBZ merchant payment integrations, and selected work across education, language tooling, and geospatial systems.'
+    description: 'Poza mobile and web engineering, identity verification, wallet and brokerage integrations, Cleva KYC automation, and CBZ merchant payments.'
   },
   '/blogs': {
     title: 'Writing · Kudzaishe Zharare',

@@ -37,13 +37,17 @@ export const projects = [
   {
     id: 'poza',
     category: 'Payments',
-    title: 'Poza: money and agent authorization',
-    summary: 'Building a money app and an authorization layer that connects actions proposed by AI agents to explicit user approval and controlled execution.',
+    title: 'Poza: building a financial app end to end',
+    summary: 'From 56 discovery interviews to mobile and web apps, document verification, payment integrations, and wallet accounting. Under active development, with brokerage integration tested in sandbox.',
     period: '2025 - Present',
-    brief: 'Poza combines a consumer money app for African users with infrastructure for authorizing actions proposed by AI agents. My focus is making permission explicit, enforceable, and traceable across the product.',
+    brief: 'As Founder and Software Engineer, I own the path from customer research and product design to application code, backend architecture, and AWS deployment. Poza is a money app under development, bringing together identity verification, wallets, cards, and investing, with a separate workstream for user-controlled AI financial assistance.',
     sections: [
-      { title: 'Permission before execution', body: 'I designed typed contracts for intent evidence, exact user approval, single-use execution grants, revocation, idempotency, and execution receipts. Models interpret requests and prepare proposed actions; domain services enforce policy and execute provider calls.' },
-      { title: 'Shared contracts across clients', body: 'I built Smithy API contracts and generated TypeScript and Dart clients, with shared fixtures covering action unions, modeled errors, approval replay, money serialization, and state transitions. The application and its AWS infrastructure are under active development.' }
+      { title: 'Research into product and interface design', body: 'I conducted 56 interviews with merchants and payments stakeholders to understand payment failures, costs, settlement visibility, and recovery. I translated findings into product requirements, user journeys, and technical design documents. Interface research, Figma mockups, and prototypes informed the mobile and web flows; the interviews informed product choices, not a claim of product-market fit.' },
+      { title: 'Mobile, web, and backend implementation', body: 'I built Flutter/Dart mobile apps, web interfaces, and TypeScript backend services on AWS, connecting account creation, identity verification, and financial account workflows. I designed API contracts, generated TypeScript and Dart clients with Smithy, and provisioned cloud infrastructure through AWS CDK. Implementation includes development and sandbox flows; not every screen represents a live financial capability.' },
+      { title: 'Document verification and onboarding', body: 'I built a document-verification service combining PaddleOCR, passport machine-readable-zone checks, barcode validation, and facial matching. The pipeline checks agreement between document signals and returns reasons for approval, review, rejection, or recapture. I integrated AWS Rekognition liveness checks into onboarding. These use existing OCR and biometric engines, not custom-trained recognition models.' },
+      { title: 'Deposits, wallet accounting, and card payments', body: 'I implemented Airwallex payment and card integrations and a PostgreSQL wallet ledger with balanced entries, deposit matching, reconciliation, and retry-safe event processing. The design credits deposits only after settlement evidence and audit checks, helping prevent duplicate credits or spendable balances unsupported by received funds. Core components are merged, with development deployment checks and launch gates tracked separately.' },
+      { title: 'Brokerage integration', body: 'I implemented Alpaca brokerage onboarding, funding, and order submission in sandbox, including account-status synchronization and handling delayed provider updates. Sandbox testing is distinct from production enablement; this work does not imply that public users can already fund accounts or trade through Poza.' },
+      { title: 'User-controlled AI financial assistance', body: 'I designed an agent architecture that requires user approval and enforces spending limits before financial actions. Backend services, rather than the model, decide what is allowed. The initial runtime foundation is deployed in development with test responses; live model calls and financial actions remain disabled in the documented configuration.' }
     ],
     links: [{ label: 'Why agent payments need proof of permission', href: 'https://poza.co/insights/agentic-payments-proving-permission/' }],
     media: []
@@ -66,7 +70,7 @@ export const projects = [
       },
       {
         title: 'Continuation',
-        body: 'The current Mutapa site returns to that original cultural-commerce thesis from Cape Town: curated African art, objects, and apparel, with intent-led discovery and protected checkout.'
+        body: 'The current Mutapa site returns to that original cultural-commerce thesis: curated African art, objects, and apparel, with intent-led discovery and protected checkout.'
       }
     ],
     links: [

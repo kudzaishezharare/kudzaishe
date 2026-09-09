@@ -17,7 +17,7 @@
         <div class="header-text">
           <h1>Kudzaishe George Zharare</h1>
           <div class="bio">
-            Founder and engineer · Cape Town<br>
+            Founder and engineer
           </div>
         </div>
       </header>
@@ -25,10 +25,18 @@
       <section>
         <h2>About</h2>
         <p class="statement">
-          I am a Zimbabwean founder and engineer based in Cape Town. Since
+          I am a founder and engineer. Since
           graduating from MIT in 2019, I have built e-commerce, payments, identity, public
-          infrastructure, and financial-compliance systems across African
+          infrastructure, and financial-compliance systems across multiple
           markets.
+        </p>
+        <p class="statement">
+          At Poza, I own product discovery, interface design, technical architecture,
+          and implementation. Research with 56 merchants and payments stakeholders
+          informed the requirements and user journeys. I built Flutter/Dart mobile
+          apps, web interfaces, and AWS backend services, including document
+          verification, Airwallex integrations, wallet accounting, and Alpaca
+          brokerage integration in sandbox. The product remains in development.
         </p>
         <p class="statement">
           At Cleva, I led the move from manual KYC to automated verification,
