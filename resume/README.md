@@ -19,6 +19,13 @@ text after editing, and commit the source and public PDF together.
 
 Content distinctions to preserve:
 
+- Skills lead with full-stack engineering, with mobile, infrastructure, data,
+  project management, and leadership grouped separately. Keep broader skills
+  and evidence on the About page. Linux refers to development environments;
+  do not infer kernel, network, or specialist systems administration expertise.
+- Project management and communication are supported by discovery, delivery
+  coordination, team leadership, stakeholder liaison, and training. Do not
+  imply a project-management certification or a separate employment title.
 - Cleva's sub-minute decision time applies to eligible completed submissions.
   Other cases still require manual review. A million users describes company
   scale supported by the infrastructure, not a measured auto-approval count.

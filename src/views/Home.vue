@@ -26,15 +26,16 @@
         <div class="header-text">
           <h1>Kudzaishe George Zharare</h1>
           <div class="bio">
-            Founder and engineer
+            Full-stack engineer and founder
           </div>
         </div>
       </header>
 
       <div class="welcome-text">
         <p>
-          I build financial software from product research and interface design
-          through backend services and deployment. At Poza, I turned 56 merchant
+          I build across frontend, backend, mobile, and cloud infrastructure,
+          taking projects from research and interface design through implementation
+          and deployment. At Poza, I turned 56 merchant
           and payments-stakeholder interviews into product requirements, user
           journeys, and technical architecture, then built mobile and web
           experiences with TypeScript services on AWS.
@@ -61,6 +62,7 @@
           science and mathematics at MIT.
         </p>
         <router-link class="portfolio-link" to="/projects#cbz-organisations">Explore the work and organisations served</router-link>
+        <router-link class="portfolio-link" to="/about#skills-heading">Skills in engineering and project delivery</router-link>
         <div class="home-actions" aria-label="Work and résumé links">
           <a
             class="work-cta"

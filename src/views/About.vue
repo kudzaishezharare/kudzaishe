@@ -17,7 +17,7 @@
         <div class="header-text">
           <h1>Kudzaishe George Zharare</h1>
           <div class="bio">
-            Founder and engineer
+            Full-stack engineer and founder
           </div>
         </div>
       </header>
@@ -25,7 +25,8 @@
       <section>
         <h2>About</h2>
         <p class="statement">
-          I am a founder and engineer. Since
+          I am a full-stack engineer and founder working across frontend, backend,
+          mobile, cloud infrastructure, and project delivery. Since
           graduating from MIT in 2019, I have built e-commerce, payments, identity, public
           infrastructure, and financial-compliance systems across multiple
           markets.
@@ -54,6 +55,16 @@
           different operating reality? I build from those local constraints,
           while designing products and protocols that can operate globally.
         </p>
+      </section>
+
+      <section aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+        <dl class="skills-list">
+          <div v-for="group in skillGroups" :key="group.title" class="skill-group">
+            <dt>{{ group.title }}</dt>
+            <dd>{{ group.detail }}</dd>
+          </div>
+        </dl>
       </section>
 
       <!-- EDUCATION -->
@@ -100,8 +111,11 @@
 </template>
 
 <script>
+import { skillGroups } from '../data/skills'
+
 export default {
-  name: 'About'
+  name: 'About',
+  data: () => ({ skillGroups })
 }
 </script>
 
@@ -225,6 +239,27 @@ h2 {
   color: var(--text-secondary);
   line-height: 1.75;
   margin: 0 0 18px;
+}
+
+.skills-list {
+  margin: 0;
+}
+
+.skill-group + .skill-group {
+  margin-top: 20px;
+}
+
+.skill-group dt {
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.skill-group dd {
+  color: var(--text-secondary);
+  font-size: 13.5px;
+  line-height: 1.65;
+  margin: 0;
 }
 
 .contact-section {

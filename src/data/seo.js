@@ -3,12 +3,12 @@ export const defaultImage = `${siteUrl}/kudzigeorge-avatar.jpg`
 
 export const seoByPath = {
   '/': {
-    title: 'Kudzaishe Zharare · Founder and Engineer',
-    description: 'Founder and engineer building financial, identity, and trust infrastructure.'
+    title: 'Kudzaishe Zharare · Full-Stack Engineer and Founder',
+    description: 'Full-stack engineer and founder working across frontend, backend, mobile, AWS infrastructure, Linux, and project delivery.'
   },
   '/about': {
     title: 'About · Kudzaishe Zharare',
-    description: 'About Kudzaishe George Zharare, an MIT graduate, founder, and engineer working across fintech, identity, and public infrastructure.'
+    description: 'Engineering skills and experience across web, mobile, AWS, Linux, project management, team leadership, and financial systems. MIT graduate.'
   },
   '/experience': {
     title: 'Experience · Kudzaishe Zharare',

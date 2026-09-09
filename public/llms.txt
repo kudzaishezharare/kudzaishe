@@ -1,13 +1,22 @@
 # Kudzaishe George Zharare
 
-> Founder and engineer building financial, identity, and trust infrastructure for markets that global technology treats as edge cases.
+> Full-stack engineer and founder working across frontend, backend, mobile, cloud infrastructure, Linux, and project delivery.
 
 This is a personal site, not a company product site. At Poza, Kudzaishe is Founder and Software Engineer, owning discovery, product and interface design, technical architecture, mobile and web implementation, and AWS backend services. The work spans 56 discovery interviews, Flutter/Dart apps, document verification, Airwallex payment and card integrations, PostgreSQL wallet accounting, and Alpaca brokerage integration in sandbox. The product remains under active development. Previously: Mutapa Marketplace (acquired by CBZ Holdings, now Zikimall), FlexID (World Economic Forum Technology Pioneer), Cleva (YC W24), and World Bank DRIVER in Zimbabwe. MIT B.S. Computer Science & Math.
+
+## Skills
+
+- Full-stack: TypeScript, JavaScript, Python, React, Vue, Node.js, Django, HTML/CSS, REST APIs, Smithy API contracts, and third-party integrations.
+- Mobile and UI: Flutter/Dart, React Native, Android, Figma mockups, prototypes, and user journeys.
+- Infrastructure: AWS, CDK infrastructure as code, Lambda, Docker, Linux development environments, Git, CI/CD, and deployment troubleshooting.
+- Data and systems: PostgreSQL, DynamoDB, Redis, webhooks, retry-safe processing, wallet accounting, identity verification, OCR, rules engines, and AI agent architecture. Poza agent work remains in development.
+- Project management: discovery, requirements gathering, technical design documents, delivery planning, dependency coordination, integration testing, sign-off, and rollout.
+- Leadership and communication: distributed team leadership, stakeholder coordination, technical documentation, and merchant training, demonstrated through FlexID and Motapa/CBZ delivery work.
 
 ## Pages
 
 - [Home](https://www.kudzaishe.com/): current work and background
-- [About](https://www.kudzaishe.com/about): bio, education, recognition, contact
+- [About](https://www.kudzaishe.com/about): bio, engineering and delivery skills, education, recognition, contact
 - [Experience](https://www.kudzaishe.com/experience): Poza, Cleva, FlexID, Mutapa, World Bank
 - [Selected work](https://www.kudzaishe.com/projects): Poza end-to-end financial app engineering, Cleva KYC automation, Mutapa Technologies and CBZ merchant integrations, Mutapa Wear, Lalela Web Games, Bantu Grammar Engine, Gosper Open Location Code
 - [Resume / CV](https://www.kudzaishe.com/kudzaishe-zharare-cv.pdf): one-page engineering resume
