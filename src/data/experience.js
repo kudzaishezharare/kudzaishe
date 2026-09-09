@@ -16,6 +16,7 @@ export const experience = [
     bullets: [
       'Reduced identity verification waits from 2 days to 3 weeks to under a minute for eligible completed submissions by automating document checks and decision workflows',
       'Built verification infrastructure used as the platform grew beyond 1 million users, including duplicate detection and referral of uncertain cases for manual review',
+      'Reduced liveness-check failures on low-end phones by addressing crashes and camera-image errors, narrowing the observed verification-completion gap with an external provider',
       'Built configurable verification rules so compliance changes could be applied without rewriting the decision flow'
     ]
   },

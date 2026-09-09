@@ -20,7 +20,8 @@ export const projects = [
     brief: 'Automated identity verification to address a manual onboarding backlog.',
     sections: [
       { title: 'Challenge and action', body: 'Applicants waited between 2 days and 3 weeks for manual review. I built document verification, duplicate detection, and configurable decision workflows, with explicit referral of uncertain cases to human reviewers.' },
-      { title: 'Result', body: 'Eligible completed submissions received decisions in under a minute. The verification infrastructure supported onboarding as the platform grew beyond 1 million users; this is company scale, not an automated approval count.' }
+      { title: 'Result', body: 'Eligible completed submissions received decisions in under a minute. The verification infrastructure supported onboarding as the platform grew beyond 1 million users; this is company scale, not an automated approval count.' },
+      { title: 'Work within device constraints', body: 'Reduced liveness-check failures on low-end phones by addressing crashes and camera-image errors, narrowing the observed verification-completion gap with an external provider.' }
     ],
     links: [{ label: 'Cleva', href: 'https://getcleva.com' }], media: []
   },
@@ -45,7 +46,7 @@ export const projects = [
       { title: 'Define the product', body: 'Translated 56 merchant and payments interviews into requirements, user journeys, prototypes, and technical designs. The interviews established product scope; they are not a customer acquisition metric.' },
       { title: 'Connect the workflow', body: 'Built mobile and web account workflows with identity verification and backend services. Connected wallet, payment, and brokerage capabilities in development and sandbox environments.' },
       { title: 'Account for funds', body: 'Designed wallet accounting and reconciliation to prevent duplicate deposit credits and keep balances traceable to settled funds. The product remains under development.' },
-      { title: 'Make delivery repeatable', body: 'Architected AWS infrastructure as code with CDK and automated deployment pipelines. Added infrastructure configuration checks and service tests to validate access controls, data isolation, and safe handling of repeat requests.' },
+      { title: 'Make delivery repeatable', body: 'Architected AWS infrastructure as code with CDK and automated deployment pipelines. Used Vitest for application and infrastructure tests, and Playwright for browser workflow tests. Added service tests to validate access controls, data isolation, and safe handling of repeat requests.' },
       { title: 'Bound agent authority', body: 'Designed AI agent workflows with scoped tool access and human approval checkpoints for consequential actions. Built and tested a read-only runtime for task handling and tool orchestration. Model-driven financial execution remains future work.' }
     ],
     links: [{ label: 'Writing on user approval for agent payments', href: 'https://poza.co/insights/agentic-payments-proving-permission/' }], media: []
