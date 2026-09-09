@@ -1,11 +1,13 @@
 export const experience = [
   {
     company: 'Poza', role: 'Founder and Software Engineer', period: '2025 - Present',
-    summary: 'Financial app from discovery through implementation',
+    summary: 'Financial app, cloud architecture, and AI agent workflows; in development',
     bullets: [
       'Translated 56 merchant and payments interviews into requirements, user journeys, and technical designs',
       'Built Flutter and Dart mobile workflows with TypeScript backend APIs, connecting identity verification, wallets, and payments in development and sandbox',
-      'Designed PostgreSQL wallet accounting and reconciliation to prevent duplicate deposit credits and keep balances traceable to settled funds'
+      'Designed PostgreSQL wallet accounting and reconciliation to prevent duplicate deposit credits and keep balances traceable to settled funds',
+      'Architected AWS infrastructure with CDK and CI/CD pipelines, making environment setup repeatable and validating configurations with automated tests',
+      'Designed AI agent workflows with human approval checkpoints; built a read-only runtime with scoped tools and automated access-control tests'
     ]
   },
   {

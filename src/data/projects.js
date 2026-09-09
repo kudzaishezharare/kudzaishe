@@ -38,13 +38,15 @@ export const projects = [
   },
   {
     id: 'poza', category: 'Financial software', title: 'Poza: research through implementation',
-    summary: 'Financial app spanning discovery, identity, wallets, and payments; in development',
+    summary: 'Financial app with cloud architecture and AI agent workflows; in development',
     period: '2025 - Present',
     brief: 'Building a financial app from product research through application and infrastructure development.',
     sections: [
       { title: 'Define the product', body: 'Translated 56 merchant and payments interviews into requirements, user journeys, prototypes, and technical designs. The interviews established product scope; they are not a customer acquisition metric.' },
       { title: 'Connect the workflow', body: 'Built mobile and web account workflows with identity verification and backend services. Connected wallet, payment, and brokerage capabilities in development and sandbox environments.' },
-      { title: 'Account for funds', body: 'Designed wallet accounting and reconciliation to prevent duplicate deposit credits and keep balances traceable to settled funds. The product remains under development.' }
+      { title: 'Account for funds', body: 'Designed wallet accounting and reconciliation to prevent duplicate deposit credits and keep balances traceable to settled funds. The product remains under development.' },
+      { title: 'Make delivery repeatable', body: 'Architected AWS infrastructure as code with CDK and automated deployment pipelines. Added infrastructure configuration checks and service tests to validate access controls, data isolation, and safe handling of repeat requests.' },
+      { title: 'Bound agent authority', body: 'Designed AI agent workflows with scoped tool access and human approval checkpoints for consequential actions. Built and tested a read-only runtime for task handling and tool orchestration. Model-driven financial execution remains future work.' }
     ],
     links: [{ label: 'Writing on user approval for agent payments', href: 'https://poza.co/insights/agentic-payments-proving-permission/' }], media: []
   },

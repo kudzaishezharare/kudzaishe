@@ -4,7 +4,7 @@ export const defaultImage = `${siteUrl}/kudzigeorge-avatar.jpg`
 export const seoByPath = {
   '/': {
     title: 'Kudzaishe Zharare · Full-Stack Software Engineer',
-    description: 'Full-stack software engineer building identity and payment systems. Experience in verification, credential privacy, cloud infrastructure, and product delivery.'
+    description: 'Full-stack software engineer building identity and payment systems, with experience in cloud architecture, AI agent workflows, and engineering leadership.'
   },
   '/blogs': {
     title: 'Writing · Kudzaishe Zharare',

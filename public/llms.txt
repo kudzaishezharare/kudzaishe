@@ -2,17 +2,18 @@
 
 > Full-stack software engineer building identity and payment systems
 
-MIT B.S. in Computer Science and Mathematics, 2019. Work spans user-facing applications, backend services, and cloud infrastructure.
+MIT B.S. in Computer Science and Mathematics, 2019. Work spans user-facing applications, cloud architecture, AI agent workflows, and engineering delivery.
 
 ## Selected evidence
 
 - Cleva: reduced identity verification waits from 2 days to 3 weeks to under a minute for eligible completed submissions
+- Poza: building cloud infrastructure and AI agent workflows with scoped tool access and automated tests; product remains in development
 - FlexID: built credential wallets with selective disclosure and zero-knowledge proofs; led a distributed engineering team
 - Mutapa: led a 5-person merchant payments team and built Mutapa Marketplace, later acquired by CBZ Holdings
 
 ## Experience
 
-- Poza, Founder and Software Engineer, 2025 to Present: translated 56 discovery interviews into requirements and technical designs; built financial account workflows, identity verification, wallet accounting, and reconciliation; product remains in development
+- Poza, Founder and Software Engineer, 2025 to Present: translated 56 discovery interviews into requirements and technical designs; built financial account workflows, wallet accounting, and reconciliation; architected AWS infrastructure with CDK and CI/CD; designed AI agent workflows and built a read-only runtime with scoped tools and automated tests; product remains in development
 - Cleva Technologies (YC W24), Lead Software Engineer, April 2024 to 2025: automated verification and configurable decision workflows; infrastructure supported onboarding as the platform grew beyond 1 million users
 - FlexID Technologies, CTO, later Co-Founder, 2021 to 2023: self-sovereign identity wallets, verifiable credentials, selective disclosure, zero-knowledge proofs, encrypted credential handling, and engineering leadership
 - Motapa, trading as Mutapa, Founder and Systems Architect, 2020 to 2021: merchant payment systems and marketplace development; subsequent payment integration support continued through 2022
@@ -20,9 +21,9 @@ MIT B.S. in Computer Science and Mathematics, 2019. Work spans user-facing appli
 
 ## Skills
 
-- Languages: TypeScript, JavaScript, Python, Dart
-- Frameworks and runtimes: React, Node.js, Django, Flutter
-- Data and delivery: PostgreSQL, REST APIs, Docker, CI/CD
+- Applications: TypeScript, Python, React, Node.js, Flutter
+- Cloud and data: AWS, infrastructure as code (CDK), PostgreSQL, CI/CD
+- AI and reliability: Agent orchestration, automated testing
 
 ## Pages
 
@@ -37,6 +38,7 @@ MIT B.S. in Computer Science and Mathematics, 2019. Work spans user-facing appli
 - Cleva's sub-minute result applies to eligible completed submissions; uncertain cases require manual review
 - Cleva's million-user figure is company scale supported by the infrastructure, not an automated approval count
 - Poza discovery interviews are not acquired customers; development and sandbox workflows do not establish production availability
+- Poza's current agent runtime uses read-only tools; human approval checkpoints are part of the design, and model-driven financial execution remains future work
 - FlexID descriptions do not imply invention of new cryptographic primitives or independent cryptographic certification
 - Mutapa Marketplace and Mutapa Wear are distinct; the acquisition refers to the marketplace
 - The World Bank engagement was a contract; retain SDC as supplied without expanding it to an unverified title

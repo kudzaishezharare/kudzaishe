@@ -17,10 +17,10 @@
             <p class="education">MIT · Computer Science and Mathematics</p>
           </div>
         </header>
-        <p class="pitch">I build identity and payment systems, from user-facing applications to the infrastructure behind them.</p>
+        <p class="pitch">I build identity and payment systems, with experience in cloud architecture, AI agent workflows, and leading engineering delivery.</p>
         <ul class="results" aria-label="Selected results">
           <li><strong>Faster onboarding</strong><span>Cut identity verification from days to under a minute for eligible submissions at Cleva</span></li>
-          <li><strong>User-controlled identity</strong><span>Built credential wallets with selective disclosure and zero-knowledge proofs at FlexID</span></li>
+          <li><strong>Cloud and AI systems</strong><span>Building cloud infrastructure and agent workflows at Poza, with scoped tool access and automated tests</span></li>
           <li><strong>Product delivery</strong><span>Led a 5-person payments team and built Mutapa Marketplace, later acquired by CBZ Holdings</span></li>
         </ul>
         <div class="actions">
