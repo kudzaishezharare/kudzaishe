@@ -2,11 +2,10 @@
   <div class="page-container">
     <!-- NAVIGATION -->
     <nav class="vertical-nav">
-      <router-link to="/" class="nav-item">Home</router-link>
-      <router-link to="/experience" class="nav-item">Experience</router-link>
-      <router-link to="/about" class="nav-item">About</router-link>
-      <router-link to="/projects" class="nav-item">Projects</router-link>
-      <router-link to="/blogs" class="nav-item active">Blogs</router-link>
+      <router-link to="/#intro" class="nav-item">Overview</router-link>
+      <router-link to="/#experience" class="nav-item">Experience</router-link>
+      <router-link to="/#skills-heading" class="nav-item">Skills</router-link>
+      <router-link to="/blogs" class="nav-item active">Writing</router-link>
     </nav>
 
     <!-- MAIN CONTENT -->
@@ -33,8 +32,8 @@
       <div class="item">
         <div class="meta">2023</div>
         <div class="details">
-          <router-link to="/flexid" class="title">FlexID: Protocol for Insurable Identity</router-link>
-          <div class="desc">A technical note on pricing trust, insuring verifiable claims, and creating economic accountability around digital credentials.</div>
+          <router-link to="/?project=flexid#projects" class="title">FlexID: user-controlled identity</router-link>
+          <div class="desc">An overview of credential wallets, selective disclosure, and privacy-preserving verification.</div>
         </div>
       </div>
 

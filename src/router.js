@@ -1,11 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from './views/Home.vue'
-import Experience from './views/Experience.vue'
-import About from './views/About.vue'
-import Projects from './views/Projects.vue'
 import Blogs from './views/Blogs.vue'
 import Article from './views/Article.vue'
-import FlexID from './views/FlexID.vue'
 import { defaultImage, seoByPath, siteUrl } from './data/seo'
 
 const routes = [
@@ -18,20 +14,17 @@ const routes = [
   {
     path: '/experience',
     name: 'Experience',
-    component: Experience,
-    meta: seoByPath['/experience']
+    redirect: to => ({ path: '/', hash: '#experience', query: to.query })
   },
   {
     path: '/about',
     name: 'About',
-    component: About,
-    meta: seoByPath['/about']
+    redirect: to => ({ path: '/', hash: to.hash || '#skills-heading', query: to.query })
   },
   {
     path: '/projects',
     name: 'Projects',
-    component: Projects,
-    meta: seoByPath['/projects']
+    redirect: to => ({ path: '/', hash: to.hash || '#projects', query: to.query })
   },
   {
     path: '/blogs',
@@ -48,8 +41,7 @@ const routes = [
   {
     path: '/flexid',
     name: 'FlexID',
-    component: FlexID,
-    meta: seoByPath['/flexid']
+    redirect: { path: '/', query: { project: 'flexid' }, hash: '#projects' }
   }
 ]
 
@@ -58,7 +50,7 @@ const router = createRouter({
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) return savedPosition
-    if (to.hash) return { el: to.hash, top: 80 }
+    if (to.hash && (to.hash !== from.hash || to.path !== from.path)) return { el: to.hash, top: 80 }
     if (to.path !== from.path) return { top: 0 }
   }
 })
@@ -75,8 +67,8 @@ const setMeta = (selector, attribute, value) => {
 }
 
 router.afterEach(to => {
-  const title = to.meta.title || 'Kudzaishe Zharare · Full-Stack Engineer and Founder'
-  const description = to.meta.description || 'Full-stack engineer and founder working across frontend, backend, mobile, AWS infrastructure, Linux, and project delivery.'
+  const title = to.meta.title || seoByPath['/'].title
+  const description = to.meta.description || seoByPath['/'].description
   const canonicalUrl = `${siteUrl}${to.path === '/' ? '/' : to.path}`
 
   document.title = title

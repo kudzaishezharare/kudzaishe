@@ -1,7 +1,7 @@
 <template>
-  <div class="page-container">
+  <div :class="embedded ? 'embedded-projects' : 'page-container'">
     <!-- NAVIGATION -->
-    <nav class="vertical-nav">
+    <nav v-if="!embedded" class="vertical-nav">
       <router-link to="/" class="nav-item">Home</router-link>
       <router-link to="/experience" class="nav-item">Experience</router-link>
       <router-link to="/about" class="nav-item">About</router-link>
@@ -10,9 +10,8 @@
     </nav>
 
     <!-- MAIN CONTENT -->
-    <main class="content">
-      <h1>Selected Work</h1>
-      <p class="project-intro">Open a project for the story, implementation notes, links, and original media.</p>
+    <div :class="embedded ? 'embedded-content' : 'content'">
+      <h2>Projects</h2>
 
       <div v-for="project in projects" :key="project.id" class="item">
         <div class="meta">{{ project.category }}</div>
@@ -37,7 +36,7 @@
           </li>
         </ul>
       </section>
-    </main>
+    </div>
 
     <ProjectModal :project="selectedProject" @close="closeProject" />
   </div>
@@ -50,6 +49,7 @@ import { organisations } from '../data/organisations'
 
 export default {
   name: 'Projects',
+  props: { embedded: { type: Boolean, default: false } },
   components: { ProjectModal },
   data() {
     return { projects, organisations, unavailableLogos: [] }
@@ -81,6 +81,11 @@ export default {
 </script>
 
 <style scoped>
+.embedded-projects { padding-top: 16px; }
+.embedded-content { width: 100%; }
+.embedded-content .item { display: block; }
+.embedded-content .meta { margin-bottom: 6px; }
+.embedded-content .desc { font-size: 16px; }
 .page-container {
   display: flex;
   min-height: 100vh;
