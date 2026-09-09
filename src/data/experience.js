@@ -4,8 +4,8 @@ export const experience = [
     summary: 'Financial app from discovery through implementation',
     bullets: [
       'Translated 56 merchant and payments interviews into requirements, user journeys, and technical designs',
-      'Built mobile and web account workflows with identity verification and backend services; connected wallets, payments, and brokerage flows in development and sandbox',
-      'Designed wallet accounting and reconciliation to prevent duplicate deposit credits and keep balances traceable to settled funds'
+      'Built Flutter and Dart mobile workflows with TypeScript backend APIs, connecting identity verification, wallets, and payments in development and sandbox',
+      'Designed PostgreSQL wallet accounting and reconciliation to prevent duplicate deposit credits and keep balances traceable to settled funds'
     ]
   },
   {

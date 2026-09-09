@@ -20,9 +20,9 @@ MIT B.S. in Computer Science and Mathematics, 2019. Work spans user-facing appli
 
 ## Skills
 
-- Engineering: full-stack development, API design, data modeling, systems integration
-- Infrastructure: cloud architecture, deployment automation, Linux, troubleshooting
-- Identity and payments: verifiable credentials, selective disclosure, transaction processing
+- Languages: TypeScript, JavaScript, Python, Dart
+- Frameworks and runtimes: React, Node.js, Django, Flutter
+- Data and delivery: PostgreSQL, REST APIs, Docker, CI/CD
 
 ## Pages
 

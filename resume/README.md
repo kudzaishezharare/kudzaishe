@@ -17,7 +17,8 @@ cp resume.pdf ../public/kudzaishe-zharare-cv.pdf
 - Keep one page by selecting and shortening content, not shrinking type or margins
 - Use action-and-result bullets of one or two lines, with no final periods or split words
 - Use XYZ when a measured result exists; otherwise state the action, purpose, and evidenced outcome without inventing a metric
-- Limit Skills to three capability groups; demonstrate leadership and coordination in experience
+- Limit Skills to three groups of recognizable languages, frameworks, and tools; demonstrate leadership and coordination in experience
+- Lead experience bullets with outcomes and add selected technical context where useful; do not turn bullets into stack inventories
 - Avoid vendor mappings, proprietary procedures, internal configurations, and unnecessary company implementation details
 - Keep claims consistent with `src/data/experience.js` and `src/data/projects.js`
 - Render and inspect the final PDF, then commit the source and public PDF together
