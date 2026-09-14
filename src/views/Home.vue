@@ -102,7 +102,9 @@ export default {
 h1 { margin: 0 0 4px; font-size: clamp(23px, 3vw, 30px); line-height: 1.25; letter-spacing: -.04em; }
 .positioning { margin: 0; font-size: 18px; color: var(--text-primary); }
 .education { margin: 8px 0 0; font-size: 12px; color: var(--text-secondary); }
-.pitch { font-size: 18px; line-height: 1.6; max-width: 580px; margin: 0 0 24px; }
+.welcome-text { font-size: 18px; line-height: 1.6; max-width: 580px; margin: 0 0 24px; }
+.welcome-text p { margin: 0; }
+.welcome-text p + p { margin-top: 16px; }
 .results { list-style: none; margin: 0; padding: 0; }
 .results li { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 20px; padding: 16px 0; border-top: 1px solid var(--border); }
 .results strong { font-size: 14px; }
@@ -139,6 +141,6 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outli
   .positioning { font-size: 16px; }
   .results li { grid-template-columns: 1fr; gap: 6px; }
   .job-heading { flex-direction: column; gap: 3px; }
-  .pitch { font-size: 17px; }
+  .welcome-text { font-size: 17px; }
 }
 </style>
