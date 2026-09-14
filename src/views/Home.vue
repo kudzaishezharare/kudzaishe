@@ -4,6 +4,7 @@
       <router-link to="/#intro" class="nav-item">Overview</router-link>
       <router-link to="/#experience" class="nav-item">Experience</router-link>
       <router-link to="/#skills-heading" class="nav-item">Skills</router-link>
+      <router-link to="/projects" class="nav-item">Projects</router-link>
       <router-link to="/blogs" class="nav-item">Writing</router-link>
     </nav>
 
@@ -105,6 +106,8 @@ h1 { margin: 0 0 4px; font-size: clamp(23px, 3vw, 30px); line-height: 1.25; lett
 .welcome-text { font-size: 18px; line-height: 1.6; max-width: 580px; margin: 0 0 24px; }
 .welcome-text p { margin: 0; }
 .welcome-text p + p { margin-top: 16px; }
+.welcome-text a, .welcome-text a:visited { color: var(--text-primary); text-decoration-color: var(--accent); text-underline-offset: 3px; }
+.welcome-text a:hover, .welcome-text a:focus-visible { color: var(--accent); }
 .results { list-style: none; margin: 0; padding: 0; }
 .results li { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 20px; padding: 16px 0; border-top: 1px solid var(--border); }
 .results strong { font-size: 14px; }
