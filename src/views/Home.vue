@@ -17,7 +17,21 @@
             <p class="education">MIT · Computer Science and Mathematics</p>
           </div>
         </header>
-        <p class="pitch">I build identity and payment systems, with experience in cloud architecture, AI agent workflows, and leading engineering delivery.</p>
+        <div class="welcome-text">
+          <p>
+            I build financial and trust infrastructure for markets that global
+            technology treats as edge cases. I am currently building Poza, a money
+            app and authorization layer for African users and AI agents. I explore
+            that problem in <a href="https://poza.co/insights/agentic-payments-proving-permission/" target="_blank" rel="noopener noreferrer">AI agents can spend money. The hard part is proving they had permission.</a>
+          </p>
+          <p>
+            Previously, I built and sold Mutapa Marketplace to CBZ Holdings, where
+            it continues as <a href="https://zikimall.com/" target="_blank" rel="noopener noreferrer">Zikimall</a>. I led
+            identity and compliance engineering at Cleva (YC W24), and served as
+            CTO and later Co-Founder of FlexID. I studied computer science and
+            mathematics at MIT.
+          </p>
+        </div>
         <ul class="results" aria-label="Selected results">
           <li><strong>Faster onboarding</strong><span>Cut identity verification from days to under a minute for eligible submissions at Cleva</span></li>
           <li><strong>Cloud and AI systems</strong><span>Building cloud infrastructure and agent workflows at Poza, with scoped tool access and automated tests</span></li>
